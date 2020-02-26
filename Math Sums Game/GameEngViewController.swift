@@ -124,6 +124,8 @@ class GameEngViewController: UIViewController {
             let a = Int.random(in: -1...4)
             resultArray.append(result + a)
             resultArray = Array(Set(resultArray))
+            resultArray = resultArray.filter { $0 != result}
+            print(resultArray)
         } while resultArray.count <= 2;
         resultArray.append(result)
         resultArray.shuffle()
