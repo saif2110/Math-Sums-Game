@@ -26,7 +26,7 @@ class SelectLevel: UIViewController {
     
     lazy var background:UIImageView = {
         let background = UIImageView()
-        background.image = #imageLiteral(resourceName: "4547")
+        background.image = bgImage
         return background
     }()
     

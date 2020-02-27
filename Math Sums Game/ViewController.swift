@@ -10,10 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var backgroundImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(gameTitel)
-       // view.addSubview(Leaderbut)
+        backgroundImage.image = bgImage
         view.addSubview(Soundbut)
         contriant()
         

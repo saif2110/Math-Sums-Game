@@ -11,6 +11,7 @@ import UIKit
 class GameEngViewController: UIViewController {
     var result = 0
     var resultArray = [Int]()
+    var counter = 15
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,15 +20,31 @@ class GameEngViewController: UIViewController {
         self.view.addSubview(questonLabel)
         optionsFORarray()
         contriantoFbackGround()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0) { //3
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) { //3
             self.areYouReady.removeFromSuperview()
             self.constrainofQuestion()
+            Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.updateCounter), userInfo: nil, repeats: true)
         }
     }
     
+    @objc func updateCounter() {
+        if counter >= 0 {
+            Time.text = String(counter)
+            if counter <= 10 && counter >= 5{
+                Time.textColor = .orange
+            }else if counter <= 5 && counter >= 0{
+                Time.textColor = .red
+            }else{
+                Time.textColor = .white
+            }
+            counter -= 1
+        }
+    }
+    
+    
     lazy var background:UIImageView = {
         let background = UIImageView()
-        background.image = #imageLiteral(resourceName: "4547")
+        background.image = bgImage
         return background
     }()
     
@@ -55,7 +72,7 @@ class GameEngViewController: UIViewController {
         let label = UILabel()
         label.textColor = .white
         label.textAlignment = .center
-        label.text = "20"
+        label.text = "15"
         label.font = UIFont.init(name: "DKCrayonCrumble", size: 65)
         return label
     }()
@@ -125,11 +142,11 @@ class GameEngViewController: UIViewController {
             resultArray.append(result + a)
             resultArray = Array(Set(resultArray))
             resultArray = resultArray.filter { $0 != result}
-            print(resultArray)
+            
         } while resultArray.count <= 2;
         resultArray.append(result)
         resultArray.shuffle()
-        print(resultArray)
+      
     }
     
     
@@ -167,9 +184,9 @@ class GameEngViewController: UIViewController {
         view.addSubview(Time)
         Time.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            Time.topAnchor.constraint(equalTo: self.view.topAnchor,constant: 30),
+            Time.topAnchor.constraint(equalTo: self.view.topAnchor,constant: 35),
             Time.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            Time.heightAnchor.constraint(equalToConstant: 70),
+            Time.heightAnchor.constraint(equalToConstant: 60),
             Time.widthAnchor.constraint(equalTo: self.view.widthAnchor,multiplier: 0.3)
         ])
         
@@ -208,6 +225,35 @@ class GameEngViewController: UIViewController {
             stack.heightAnchor.constraint(equalTo: self.view.heightAnchor,multiplier: 0.2)
         ])
         
+        AnsButton1.addTarget(self, action: #selector(Ans1), for: .touchUpInside)
+        AnsButton2.addTarget(self, action: #selector(Ans2), for: .touchUpInside)
+        AnsButton3.addTarget(self, action: #selector(Ans3), for: .touchUpInside)
+        AnsButton4.addTarget(self, action: #selector(Ans4), for: .touchUpInside)
+        
+    }
+    
+    @objc func Ans1(){
+        print(rightorWronmg(ButText: AnsButton1.titleLabel!.text!))
+    }
+    
+    @objc func Ans2(){
+        print(rightorWronmg(ButText: AnsButton2.titleLabel!.text!))
+    }
+    
+    @objc func Ans3(){
+        print(rightorWronmg(ButText: AnsButton3.titleLabel!.text!))
+    }
+    
+    @objc func Ans4(){
+        print(rightorWronmg(ButText: AnsButton4.titleLabel!.text!))
+    }
+    
+    func rightorWronmg(ButText:String) -> Bool{
+        if ButText == String(result){
+            return true
+        }else{
+            return false
+        }
     }
     
 }

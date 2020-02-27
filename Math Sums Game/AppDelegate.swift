@@ -11,6 +11,7 @@ import SwiftySound
 
 var gameName  = "Math Sums Learner for Kids"
 var buttonFontSize:CGFloat = 17.0
+var bgImage = #imageLiteral(resourceName: "bg")
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
