@@ -25,6 +25,8 @@ class GameEngViewController: UIViewController {
             self.constrainofQuestion()
             Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.updateCounter), userInfo: nil, repeats: true)
         }
+        
+      
     }
     
     @objc func updateCounter() {
