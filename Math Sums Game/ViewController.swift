@@ -18,10 +18,29 @@ class ViewController: UIViewController {
         backgroundImage.image = bgImage
         view.addSubview(Soundbut)
         contriant()
-        
         Additionbutton.addTarget(self, action: #selector(additionPressed), for: .touchUpInside)
+        Substactionbutton.addTarget(self, action: #selector(SubstactionbuttonPressed), for: .touchUpInside)
+        Multiplicationbutton.addTarget(self, action: #selector(MultiplicationbuttonPressed), for: .touchUpInside)
+        Divisionbutton.addTarget(self, action: #selector(DivisionbuttonPressed), for: .touchUpInside)
     }
+    
     @objc func additionPressed(){
+        mathType = "Addition"
+        let vc = SelectLevel()
+        self.present(vc, animated: true, completion: nil)
+    }
+    @objc func SubstactionbuttonPressed(){
+         mathType = "Substraction"
+        let vc = SelectLevel()
+        self.present(vc, animated: true, completion: nil)
+    }
+    @objc func MultiplicationbuttonPressed(){
+        mathType = "Multiplication"
+        let vc = SelectLevel()
+        self.present(vc, animated: true, completion: nil)
+    }
+    @objc func DivisionbuttonPressed(){
+        mathType = "Division"
         let vc = SelectLevel()
         self.present(vc, animated: true, completion: nil)
     }

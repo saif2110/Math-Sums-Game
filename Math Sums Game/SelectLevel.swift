@@ -34,8 +34,8 @@ class SelectLevel: UIViewController {
     }
     
     @objc func easyPressed(sender: UIGestureRecognizer) {
-        print(sender.name!)
         let vc = GameEngViewController()
+        difficulty = sender.name!
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
     }

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5C92C31524056F5B008C39E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C92C31424056F5B008C39E8 /* AppDelegate.swift */; };
-		5C92C31724056F5B008C39E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C92C31624056F5B008C39E8 /* SceneDelegate.swift */; };
 		5C92C31924056F5B008C39E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C92C31824056F5B008C39E8 /* ViewController.swift */; };
 		5C92C31C24056F5B008C39E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C92C31A24056F5B008C39E8 /* Main.storyboard */; };
 		5C92C31E24056F5C008C39E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C92C31D24056F5C008C39E8 /* Assets.xcassets */; };
@@ -18,13 +17,14 @@
 		5C92C32E2406B6F0008C39E8 /* GameEngViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C92C32D2406B6F0008C39E8 /* GameEngViewController.swift */; };
 		5C92C334240831E3008C39E8 /* EasyMidHardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C92C333240831E3008C39E8 /* EasyMidHardView.swift */; };
 		BFE0413C0D07B82313421D79 /* Pods_Math_Sums_Game.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 517D91DC53901517A5CA6FF9 /* Pods_Math_Sums_Game.framework */; };
+		C9E7BACF2408EDCE0040058C /* RightAnswerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E7BACE2408EDCE0040058C /* RightAnswerVC.swift */; };
+		C9E7BAD12408FCF30040058C /* WrongAnswerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E7BAD02408FCF30040058C /* WrongAnswerVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		517D91DC53901517A5CA6FF9 /* Pods_Math_Sums_Game.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Math_Sums_Game.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C92C31124056F5B008C39E8 /* Math Sums Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Math Sums Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C92C31424056F5B008C39E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5C92C31624056F5B008C39E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5C92C31824056F5B008C39E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5C92C31B24056F5B008C39E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5C92C31D24056F5C008C39E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -35,6 +35,8 @@
 		5C92C32D2406B6F0008C39E8 /* GameEngViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEngViewController.swift; sourceTree = "<group>"; };
 		5C92C333240831E3008C39E8 /* EasyMidHardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyMidHardView.swift; sourceTree = "<group>"; };
 		9BF0FFAFB7B72EE01791155E /* Pods-Math Sums Game.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Math Sums Game.debug.xcconfig"; path = "Target Support Files/Pods-Math Sums Game/Pods-Math Sums Game.debug.xcconfig"; sourceTree = "<group>"; };
+		C9E7BACE2408EDCE0040058C /* RightAnswerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightAnswerVC.swift; sourceTree = "<group>"; };
+		C9E7BAD02408FCF30040058C /* WrongAnswerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrongAnswerVC.swift; sourceTree = "<group>"; };
 		ED5641E45053206D1EB78646 /* Pods-Math Sums Game.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Math Sums Game.release.xcconfig"; path = "Target Support Files/Pods-Math Sums Game/Pods-Math Sums Game.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,7 +84,6 @@
 				5C92C32824057205008C39E8 /* DkCrayonCrumble-ddll.ttf */,
 				5C92C333240831E3008C39E8 /* EasyMidHardView.swift */,
 				5C92C31424056F5B008C39E8 /* AppDelegate.swift */,
-				5C92C31624056F5B008C39E8 /* SceneDelegate.swift */,
 				5C92C31A24056F5B008C39E8 /* Main.storyboard */,
 				5C92C31D24056F5C008C39E8 /* Assets.xcassets */,
 				5C92C31F24056F5C008C39E8 /* LaunchScreen.storyboard */,
@@ -90,6 +91,8 @@
 				5C92C31824056F5B008C39E8 /* ViewController.swift */,
 				5C92C32B240595AB008C39E8 /* SelectLevel.swift */,
 				5C92C32D2406B6F0008C39E8 /* GameEngViewController.swift */,
+				C9E7BACE2408EDCE0040058C /* RightAnswerVC.swift */,
+				C9E7BAD02408FCF30040058C /* WrongAnswerVC.swift */,
 			);
 			path = "Math Sums Game";
 			sourceTree = "<group>";
@@ -223,8 +226,9 @@
 				5C92C32E2406B6F0008C39E8 /* GameEngViewController.swift in Sources */,
 				5C92C31924056F5B008C39E8 /* ViewController.swift in Sources */,
 				5C92C31524056F5B008C39E8 /* AppDelegate.swift in Sources */,
+				C9E7BACF2408EDCE0040058C /* RightAnswerVC.swift in Sources */,
+				C9E7BAD12408FCF30040058C /* WrongAnswerVC.swift in Sources */,
 				5C92C334240831E3008C39E8 /* EasyMidHardView.swift in Sources */,
-				5C92C31724056F5B008C39E8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,7 +374,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 959YZPX78D;
+				DEVELOPMENT_TEAM = UQTFTW56RV;
 				INFOPLIST_FILE = "Math Sums Game/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -389,7 +393,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 959YZPX78D;
+				DEVELOPMENT_TEAM = UQTFTW56RV;
 				INFOPLIST_FILE = "Math Sums Game/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

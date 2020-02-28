@@ -8,39 +8,50 @@
 
 import UIKit
 
+var difficulty = "Easy"
+
 class GameEngViewController: UIViewController {
     var result = 0
     var resultArray = [Int]()
     var counter = 15
-    
+    var type = "Addition"
+    var timer = Timer()
     override func viewDidLoad() {
         super.viewDidLoad()
+        type = mathType
         self.view.addSubview(background)
         self.view.addSubview(areYouReady)
         self.view.addSubview(questonLabel)
         optionsFORarray()
         contriantoFbackGround()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) { //3
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.3) { //1
             self.areYouReady.removeFromSuperview()
             self.constrainofQuestion()
-            Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.updateCounter), userInfo: nil, repeats: true)
+            self.timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.updateCounter), userInfo: nil, repeats: true)
         }
-        
-      
     }
     
     @objc func updateCounter() {
-        if counter >= 0 {
+        if counter >= -1 {
             Time.text = String(counter)
             if counter <= 10 && counter >= 5{
                 Time.textColor = .orange
-            }else if counter <= 5 && counter >= 0{
+            }else if counter <= 5 && counter > 0{
                 Time.textColor = .red
+            }else if counter == 0 {
+                counter = 15
+                timer.invalidate()
+                resoneforLosss = "Sorry, Your Time is Over 😔"
+                self.dismiss(animated: false) {
+                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                    appDelegate.window?.rootViewController = WrongAnswerVC()
+                }
             }else{
                 Time.textColor = .white
             }
             counter -= 1
         }
+        
     }
     
     
@@ -58,7 +69,6 @@ class GameEngViewController: UIViewController {
         label.font = UIFont.init(name: "DKCrayonCrumble", size: 45)
         return label
     }()
-    
     
     lazy var level:UILabel = {
         let label = UILabel()
@@ -131,13 +141,102 @@ class GameEngViewController: UIViewController {
     }()
     
     
+    var a = Int.random(in: 1...9)
+    var b = Int.random(in: 1...9)
+    
     func question() -> String {
-        let a = Int.random(in: 1...9)
-        let b = Int.random(in: 1...9)
-        result = a + b
-        return String(a) + " + " + String(b) + " = ??"
+        questionRange()
+        
+        if type == "Addition"{
+            result = a + b
+            answerWas = String(result)
+            return String(a) + " + " + String(b) + " = ??"
+        }else if type == "Substraction"{
+            result = a - b
+            answerWas = String(result)
+            return String(a) + " - " + String(b) + " = ??"
+        }else if type == "Multiplication"{
+            result = a * b
+            answerWas = String(result)
+            return String(a) + " × " + String(b) + " = ??"
+        }else{
+            result = a / b
+            answerWas = String(result)
+            return String(a) + " ÷ " + String(b) + " = ??"
+        }
     }
     
+    
+    func questionRange(){
+        print(type)
+        if type == "Addition"{
+            
+            if difficulty == "Hard"{
+                
+                a = Int.random(in: 100...899)
+                b = Int.random(in: 100...899)
+                
+            }else if difficulty == "Medium"{
+                
+                a = Int.random(in: 10...89)
+                b = Int.random(in: 10...89)
+                
+            }else{
+                a = Int.random(in: 1...9)
+                b = Int.random(in: 1...9)
+            }
+            
+        }else if type == "Substraction" {
+            
+            if difficulty == "Hard"{
+                
+                a = Int.random(in: 100...899)
+                b = Int.random(in: 100...899)
+                
+            }else if difficulty == "Medium"{
+                
+                a = Int.random(in: 10...89)
+                b = Int.random(in: 10...89)
+                
+            }else{
+                a = Int.random(in: 1...9)
+                b = Int.random(in: 1...9)
+            }
+            
+        }else if type == "Multiplication"{
+            
+            if difficulty == "Hard"{
+                
+                a = Int.random(in: 10...99)
+                b = Int.random(in: 10...99)
+                
+            }else if difficulty == "Medium"{
+                
+                a = Int.random(in: 10...30)
+                b = Int.random(in: 1...9)
+                
+            }else{
+                a = Int.random(in: 1...9)
+                b = Int.random(in: 1...9)
+            }
+            
+        }else if type == "Division"{
+            
+            if difficulty == "Hard"{
+                a = Int.random(in: 40...90)
+                b = Int.random(in: 10...30)
+            }else if difficulty == "Medium"{
+                
+                a = Int.random(in: 20...40)
+                b = Int.random(in: 5...9)
+                
+            }else{
+                a = Int.random(in: 10...30)
+                b = Int.random(in: 1...5)
+            }
+            
+        }
+    }
     func optionsFORarray(){
         repeat {
             let a = Int.random(in: -1...4)
@@ -148,18 +247,15 @@ class GameEngViewController: UIViewController {
         } while resultArray.count <= 2;
         resultArray.append(result)
         resultArray.shuffle()
-      
     }
-    
-    
-    
     
     func contriantoFbackGround(){
         background.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([    background.trailingAnchor.constraint(equalTo:self.view.trailingAnchor,constant: -5),
-                                         background.leadingAnchor.constraint(equalTo: self.view.leadingAnchor,constant: 5),
-                                         background.topAnchor.constraint(equalTo: self.view.topAnchor,constant: 5),
-                                         background.bottomAnchor.constraint(equalTo: self.view.bottomAnchor,constant: -5)
+        NSLayoutConstraint.activate([
+            background.trailingAnchor.constraint(equalTo:self.view.trailingAnchor,constant: -5),
+            background.leadingAnchor.constraint(equalTo: self.view.leadingAnchor,constant: 5),
+            background.topAnchor.constraint(equalTo: self.view.topAnchor,constant: 5),
+            background.bottomAnchor.constraint(equalTo: self.view.bottomAnchor,constant: -5)
         ])
         
         areYouReady.translatesAutoresizingMaskIntoConstraints = false
@@ -235,19 +331,70 @@ class GameEngViewController: UIViewController {
     }
     
     @objc func Ans1(){
-        print(rightorWronmg(ButText: AnsButton1.titleLabel!.text!))
+        timer.invalidate()
+        if  rightorWronmg(ButText: AnsButton1.titleLabel!.text!) {
+            self.dismiss(animated: false) {
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                appDelegate.window?.rootViewController = RightAnswerVC()
+            }
+        }else{
+            self.dismiss(animated: false) {
+                resoneforLosss = "Sorry, Your Answer is Wrong 😔"
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                appDelegate.window?.rootViewController = WrongAnswerVC()
+            }
+        }
     }
     
     @objc func Ans2(){
-        print(rightorWronmg(ButText: AnsButton2.titleLabel!.text!))
+        timer.invalidate()
+        if  rightorWronmg(ButText: AnsButton2.titleLabel!.text!) {
+            self.dismiss(animated: false) {
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                appDelegate.window?.rootViewController = RightAnswerVC()
+            }
+        }else{
+            self.dismiss(animated: false) {
+                resoneforLosss = "Sorry, Your Answer is Wrong 😔"
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                appDelegate.window?.rootViewController = WrongAnswerVC()
+            }
+        }
+        
     }
     
     @objc func Ans3(){
-        print(rightorWronmg(ButText: AnsButton3.titleLabel!.text!))
+        timer.invalidate()
+        if  rightorWronmg(ButText: AnsButton3.titleLabel!.text!) {
+            self.dismiss(animated: false) {
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                appDelegate.window?.rootViewController = RightAnswerVC()
+            }
+        }else{
+            self.dismiss(animated: false) {
+                resoneforLosss = "Sorry, Your Answer is Wrong 😔"
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                appDelegate.window?.rootViewController = WrongAnswerVC()
+            }
+        }
+        
     }
     
     @objc func Ans4(){
-        print(rightorWronmg(ButText: AnsButton4.titleLabel!.text!))
+        timer.invalidate()
+        if  rightorWronmg(ButText: AnsButton4.titleLabel!.text!) {
+            self.dismiss(animated: false) {
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                appDelegate.window?.rootViewController = RightAnswerVC()
+            }
+        }else{
+            self.dismiss(animated: false) {
+                resoneforLosss = "Sorry, Your Answer is Wrong 😔"
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                appDelegate.window?.rootViewController = WrongAnswerVC()
+            }
+        }
+        
     }
     
     func rightorWronmg(ButText:String) -> Bool{
