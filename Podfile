@@ -8,4 +8,5 @@ target 'Math Sums Game' do
   # Pods for Math Sums Game
   pod 'SwiftySound', '~> 1.2'
 pod "SwiftFireworks"
+pod 'SwiftGifOrigin', '~> 1.7'
 end

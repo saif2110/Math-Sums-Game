@@ -31,6 +31,7 @@ class GameEngViewController: UIViewController {
         }
     }
     
+    
     @objc func updateCounter() {
         if counter >= -1 {
             Time.text = String(counter)
@@ -53,8 +54,7 @@ class GameEngViewController: UIViewController {
         }
         
     }
-    
-    
+
     lazy var background:UIImageView = {
         let background = UIImageView()
         background.image = bgImage
@@ -146,7 +146,6 @@ class GameEngViewController: UIViewController {
     
     func question() -> String {
         questionRange()
-        
         if type == "Addition"{
             result = a + b
             answerWas = String(result)
@@ -234,18 +233,18 @@ class GameEngViewController: UIViewController {
                 a = Int.random(in: 10...30)
                 b = Int.random(in: 1...5)
             }
-            
         }
     }
+
     func optionsFORarray(){
         repeat {
             let a = Int.random(in: -1...4)
             resultArray.append(result + a)
             resultArray = Array(Set(resultArray))
-            resultArray = resultArray.filter { $0 != result}
-            
-        } while resultArray.count <= 2;
+            resultArray = resultArray.filter { $0 != result }
+        } while resultArray.count <= 1;
         resultArray.append(result)
+        resultArray.append(result+10)
         resultArray.shuffle()
     }
     

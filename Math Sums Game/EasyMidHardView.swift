@@ -86,7 +86,7 @@ class EasyMidHardView: UIView {
         let label = UILabel()
         label.textColor = .white
         label.textAlignment = .center
-        label.text = "Level 12/30"
+        label.text = "Score 200"
         label.font = UIFont.init(name: "DKCrayonCrumble", size: 25)
         return label
     }()

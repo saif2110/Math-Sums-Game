@@ -17,7 +17,18 @@ class WrongAnswerVC: UIViewController {
         self.view.addSubview(ansWas)
         contriant()
         backToMainMenu.addTarget(self, action: #selector(backtoMain), for: .touchUpInside)
+        playAgain.addTarget(self, action: #selector(playAgainPressed), for: .touchUpInside)
     }
+    
+    @objc func playAgainPressed() {
+        DispatchQueue.main.asyncAfter(deadline: .now()) {
+            self.dismiss(animated: true) {
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                appDelegate.window?.rootViewController = GameEngViewController()
+            }
+        }
+    }
+    
     
     @objc func backtoMain() {
         self.dismiss(animated: false) {

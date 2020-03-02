@@ -1,20 +1,24 @@
 PODS:
   - SwiftFireworks (0.1.0)
+  - SwiftGifOrigin (1.7.0)
   - SwiftySound (1.2.0)
 
 DEPENDENCIES:
   - SwiftFireworks
+  - SwiftGifOrigin (~> 1.7)
   - SwiftySound (~> 1.2)
 
 SPEC REPOS:
   trunk:
     - SwiftFireworks
+    - SwiftGifOrigin
     - SwiftySound
 
 SPEC CHECKSUMS:
   SwiftFireworks: 63447e004fea5db5856a56065f4f0d2df23715b1
+  SwiftGifOrigin: fbd6cf37afcfcf97a5c3db996ddc0492e5c5c145
   SwiftySound: 9eb28bb14edb601b40027e44319e0ef8383f88bf
 
-PODFILE CHECKSUM: ddd9e8d6174aea028a3e6b9ce2eb50dfb51113ea
+PODFILE CHECKSUM: abae507dc043902799c7e16c57cb7538bb82b82a
 
 COCOAPODS: 1.8.4

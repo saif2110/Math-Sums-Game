@@ -7,70 +7,97 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0B2AFA38476B8CC43DDE70CE3F8E80BF /* SwiftFireworks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C63BED57039C138CBBEAD9D2F3A89C /* SwiftFireworks.swift */; };
-		11B05E9F65B001C7DA5E06E78969C66E /* SwiftFireworks-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B2F48EB06958F897FBD1E169A7ECFC64 /* SwiftFireworks-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2338FE6ECE65009DC0D62A9E07ECED4B /* SwiftySound-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CFB12A49A995CA328DCEDBB0A1C8EFC /* SwiftySound-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4B7146FC99CEACF38A38F14B32140D31 /* Pods-Math Sums Game-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C6120F58486BA61F31680D7C156A59 /* Pods-Math Sums Game-dummy.m */; };
+		0141A95DB1F647899CC5D4DB824C065C /* SwiftGifOrigin-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6FA2E099A87EFBB223BC08D36C45CE /* SwiftGifOrigin-dummy.m */; };
+		0B2AFA38476B8CC43DDE70CE3F8E80BF /* SwiftFireworks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BF21B2489F8CB574ABB8E1CB4A9BA7 /* SwiftFireworks.swift */; };
+		11B05E9F65B001C7DA5E06E78969C66E /* SwiftFireworks-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B139EF30F5BE9DD1830BFC6DEEFF9EA6 /* SwiftFireworks-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		224BAD87E92E0520DBB7D12E01998F0A /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58702DBDD1B9109D6175481D21EB67ED /* UIImage+Gif.swift */; };
+		2338FE6ECE65009DC0D62A9E07ECED4B /* SwiftySound-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 20C9DB007A73FEABADC421823BB12605 /* SwiftySound-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		530331A45D52B76952BFF4986D8794AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E80C92FE6416D144F4F8E40525C40FCC /* Foundation.framework */; };
 		561BAD8F7B20316EC38E86DCCEBB8653 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E07B0E7D8EDD7E883339D7E8FA65819E /* AVFoundation.framework */; };
-		870923C170D1D83AF797CA58780BEAFF /* SwiftFireworks-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9130418B1815A11C8843FB31D883E85F /* SwiftFireworks-dummy.m */; };
+		870923C170D1D83AF797CA58780BEAFF /* SwiftFireworks-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB57C5AD9A36FD6437F73C37B11F21B /* SwiftFireworks-dummy.m */; };
+		8991C75CE8321B02706767B01D29890A /* SwiftGifOrigin-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 35F4C30241F2B1EBC35CB74E9E416A56 /* SwiftGifOrigin-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		96BF44F4C779686C187DD2A5CF26C8AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E80C92FE6416D144F4F8E40525C40FCC /* Foundation.framework */; };
-		97DA2BCF5489F2B51A1D677AF84A181A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E80C92FE6416D144F4F8E40525C40FCC /* Foundation.framework */; };
-		BA782B7A91216D85090879BDB3226736 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DA978808C2043E9101216F54C73352 /* Sound.swift */; };
-		CB59F60F311B28783E1E7A816828D316 /* SwiftySound-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CC277ED986C47DF7B7C109F035C6921 /* SwiftySound-dummy.m */; };
+		BA782B7A91216D85090879BDB3226736 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876AFD2AF580FC9677F77BE635E094B6 /* Sound.swift */; };
+		C787A09F86CF612FA4F1E363031918D6 /* Pods-Math Sums Game-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BF59C01007B212F9E207836BF797C9F /* Pods-Math Sums Game-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C9E3E1BED332170FC1FDD12950536494 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E80C92FE6416D144F4F8E40525C40FCC /* Foundation.framework */; };
+		CB59F60F311B28783E1E7A816828D316 /* SwiftySound-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E06D3CA249794BD4C392A27DD8AEF16 /* SwiftySound-dummy.m */; };
 		D652C1A3E2FEB48B4A03B8354974A57E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E80C92FE6416D144F4F8E40525C40FCC /* Foundation.framework */; };
-		E0C80BBF67339B089A732B11C6E0B9B3 /* Pods-Math Sums Game-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BF59C01007B212F9E207836BF797C9F /* Pods-Math Sums Game-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F2BCF196525AA39F14C11323AE51894F /* Pods-Math Sums Game-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C6120F58486BA61F31680D7C156A59 /* Pods-Math Sums Game-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2905380D6C8EB1ED3F7E31EEB3BAE796 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AF76419D4650F093FFACB1AD713C1EF1;
-			remoteInfo = SwiftySound;
-		};
-		5EDAC32C47A0D75812DF70C59CB691C5 /* PBXContainerItemProxy */ = {
+		1188F7B42996ED1AFADB7D1B7B500EEF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = E83F55830E89CE0BC52C002A055AB9F5;
 			remoteInfo = SwiftFireworks;
 		};
+		514530ADA8631F45F90E504E0F68452D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF76419D4650F093FFACB1AD713C1EF1;
+			remoteInfo = SwiftySound;
+		};
+		C3DC8BBEDD02B4BA7BBD9343965ECE59 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A7F9119A842E66F127E010A97169E4F4;
+			remoteInfo = SwiftGifOrigin;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		01A5AC1552C34CE121EBEB97F7F1B2BA /* Pods-Math Sums Game-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Math Sums Game-frameworks.sh"; sourceTree = "<group>"; };
-		06B1CB73BB7CFAB91E8218C825963354 /* SwiftySound-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftySound-Info.plist"; sourceTree = "<group>"; };
 		0906BD6177761C641A13A7ABC7E6D0AA /* Pods_Math_Sums_Game.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Math_Sums_Game.framework; path = "Pods-Math Sums Game.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1CFB12A49A995CA328DCEDBB0A1C8EFC /* SwiftySound-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftySound-umbrella.h"; sourceTree = "<group>"; };
+		102EDE0979BD0B80043909807052B6DC /* SwiftFireworks.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftFireworks.xcconfig; sourceTree = "<group>"; };
 		202D6FC1140D78AA622261FD91526499 /* Pods-Math Sums Game.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Math Sums Game.debug.xcconfig"; sourceTree = "<group>"; };
-		229FBC9AAEF7D99A3328B32C3B082540 /* SwiftFireworks-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftFireworks-prefix.pch"; sourceTree = "<group>"; };
+		20C9DB007A73FEABADC421823BB12605 /* SwiftySound-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftySound-umbrella.h"; sourceTree = "<group>"; };
+		21BF21B2489F8CB574ABB8E1CB4A9BA7 /* SwiftFireworks.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftFireworks.swift; path = SwiftFireworks/Classes/SwiftFireworks.swift; sourceTree = "<group>"; };
+		21C6295AF4E228DA31FA6794DABFCDA4 /* SwiftGifOrigin.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftGifOrigin.xcconfig; sourceTree = "<group>"; };
 		298E1ECAD0462E2611189DE889291181 /* Pods-Math Sums Game-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Math Sums Game-Info.plist"; sourceTree = "<group>"; };
-		32DA978808C2043E9101216F54C73352 /* Sound.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Sound.swift; path = Sources/Sound.swift; sourceTree = "<group>"; };
-		3A27DC7152BAEA3F3C4ECDC0D7838ED1 /* SwiftySound.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftySound.xcconfig; sourceTree = "<group>"; };
-		3CC277ED986C47DF7B7C109F035C6921 /* SwiftySound-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftySound-dummy.m"; sourceTree = "<group>"; };
-		44A316563459A5585330626204B54823 /* SwiftFireworks.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftFireworks.xcconfig; sourceTree = "<group>"; };
+		2AECEC9377F3738419727387661916EE /* SwiftySound-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftySound-Info.plist"; sourceTree = "<group>"; };
+		2F8E5DF2091CA233AE7BA287E90C2D2E /* SwiftySound.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftySound.modulemap; sourceTree = "<group>"; };
+		35F4C30241F2B1EBC35CB74E9E416A56 /* SwiftGifOrigin-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftGifOrigin-umbrella.h"; sourceTree = "<group>"; };
+		3CB2273D77AD845BF220C8F352520B92 /* SwiftGifOrigin-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftGifOrigin-Info.plist"; sourceTree = "<group>"; };
+		48F1995A1DE082037DD77EF00DEAB3D6 /* SwiftFireworks-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftFireworks-prefix.pch"; sourceTree = "<group>"; };
 		4B90ADC9C7BC9929611D7FC53E849A04 /* Pods-Math Sums Game-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Math Sums Game-acknowledgements.markdown"; sourceTree = "<group>"; };
+		4BB57C5AD9A36FD6437F73C37B11F21B /* SwiftFireworks-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftFireworks-dummy.m"; sourceTree = "<group>"; };
 		4BF59C01007B212F9E207836BF797C9F /* Pods-Math Sums Game-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Math Sums Game-umbrella.h"; sourceTree = "<group>"; };
-		66E07E581990DCEC3E313C628B51C056 /* SwiftFireworks-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftFireworks-Info.plist"; sourceTree = "<group>"; };
-		6F9F82137B0A54DAC0F211382DFA0885 /* SwiftySound-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftySound-prefix.pch"; sourceTree = "<group>"; };
+		58702DBDD1B9109D6175481D21EB67ED /* UIImage+Gif.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Gif.swift"; path = "SwiftGifCommon/UIImage+Gif.swift"; sourceTree = "<group>"; };
+		6D4DD51F358DDFBF91E0BAFED77C8206 /* SwiftGifOrigin-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftGifOrigin-prefix.pch"; sourceTree = "<group>"; };
+		6E06D3CA249794BD4C392A27DD8AEF16 /* SwiftySound-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftySound-dummy.m"; sourceTree = "<group>"; };
 		758421AC7888D9B853B5AEB779F04355 /* Pods-Math Sums Game-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Math Sums Game-acknowledgements.plist"; sourceTree = "<group>"; };
-		9130418B1815A11C8843FB31D883E85F /* SwiftFireworks-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftFireworks-dummy.m"; sourceTree = "<group>"; };
+		777953B0F37BE29E6712CE3E6C87353A /* SwiftySound.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftySound.xcconfig; sourceTree = "<group>"; };
+		7BF9791948322AA505304B111CD3B2AC /* SwiftFireworks-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftFireworks-Info.plist"; sourceTree = "<group>"; };
+		876AFD2AF580FC9677F77BE635E094B6 /* Sound.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Sound.swift; path = Sources/Sound.swift; sourceTree = "<group>"; };
+		8E11114EB42D9DA49AD3DCEAD6567E79 /* SwiftGifOrigin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftGifOrigin.framework; path = SwiftGifOrigin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		996615DEDCD6C2933EC3F8504427765B /* SwiftySound.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftySound.framework; path = SwiftySound.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C73B1F804434914D6EA35D84C93AAEA /* SwiftGifOrigin.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftGifOrigin.modulemap; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A9F960FC4683B18BC46B7720F9AF3209 /* SwiftySound.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftySound.modulemap; sourceTree = "<group>"; };
-		B2F48EB06958F897FBD1E169A7ECFC64 /* SwiftFireworks-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftFireworks-umbrella.h"; sourceTree = "<group>"; };
+		B139EF30F5BE9DD1830BFC6DEEFF9EA6 /* SwiftFireworks-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftFireworks-umbrella.h"; sourceTree = "<group>"; };
+		D516CC0ED57AF8B71A5A951BEE3E778F /* SwiftySound-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftySound-prefix.pch"; sourceTree = "<group>"; };
+		D9906BFD3D6C1387B452EC34F8CAFCA6 /* SwiftFireworks.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftFireworks.modulemap; sourceTree = "<group>"; };
 		D9C6120F58486BA61F31680D7C156A59 /* Pods-Math Sums Game-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Math Sums Game-dummy.m"; sourceTree = "<group>"; };
 		DB3CF374AE24A8AF02FE5B9BDD5EAA5D /* Pods-Math Sums Game.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Math Sums Game.release.xcconfig"; sourceTree = "<group>"; };
+		DD6FA2E099A87EFBB223BC08D36C45CE /* SwiftGifOrigin-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftGifOrigin-dummy.m"; sourceTree = "<group>"; };
 		E07B0E7D8EDD7E883339D7E8FA65819E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
-		E5C63BED57039C138CBBEAD9D2F3A89C /* SwiftFireworks.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftFireworks.swift; path = SwiftFireworks/Classes/SwiftFireworks.swift; sourceTree = "<group>"; };
 		E80C92FE6416D144F4F8E40525C40FCC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		F4C145D4C290AD6C43F811DECC54EB60 /* Pods-Math Sums Game.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Math Sums Game.modulemap"; sourceTree = "<group>"; };
 		F9F797B01CC67149A28CB03476FA1BF6 /* SwiftFireworks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftFireworks.framework; path = SwiftFireworks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDF73BFB7502AD29F4992673F53854A2 /* SwiftFireworks.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftFireworks.modulemap; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		285FA06475408AD90C5178917DAA61B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				530331A45D52B76952BFF4986D8794AD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5ABB6DF0F4AE691C073BD2A8459A03B9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -88,45 +115,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B2C3B41C0DB8B65FE8403CD7350FF2B3 /* Frameworks */ = {
+		C844CEE815202DAC5090EA5A54FCA01C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97DA2BCF5489F2B51A1D677AF84A181A /* Foundation.framework in Frameworks */,
+				C9E3E1BED332170FC1FDD12950536494 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		08819CEB40F418D879C906A8A07BD9EA /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				A9F960FC4683B18BC46B7720F9AF3209 /* SwiftySound.modulemap */,
-				3A27DC7152BAEA3F3C4ECDC0D7838ED1 /* SwiftySound.xcconfig */,
-				3CC277ED986C47DF7B7C109F035C6921 /* SwiftySound-dummy.m */,
-				06B1CB73BB7CFAB91E8218C825963354 /* SwiftySound-Info.plist */,
-				6F9F82137B0A54DAC0F211382DFA0885 /* SwiftySound-prefix.pch */,
-				1CFB12A49A995CA328DCEDBB0A1C8EFC /* SwiftySound-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SwiftySound";
-			sourceTree = "<group>";
-		};
-		0D544E6670D5CE41226C7E5424B6B91D /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				FDF73BFB7502AD29F4992673F53854A2 /* SwiftFireworks.modulemap */,
-				44A316563459A5585330626204B54823 /* SwiftFireworks.xcconfig */,
-				9130418B1815A11C8843FB31D883E85F /* SwiftFireworks-dummy.m */,
-				66E07E581990DCEC3E313C628B51C056 /* SwiftFireworks-Info.plist */,
-				229FBC9AAEF7D99A3328B32C3B082540 /* SwiftFireworks-prefix.pch */,
-				B2F48EB06958F897FBD1E169A7ECFC64 /* SwiftFireworks-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SwiftFireworks";
-			sourceTree = "<group>";
-		};
 		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,13 +134,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		1EA80CCA3DD0FA7B79CAD62C440047E7 /* Pods */ = {
+		280F5D07BED480EC9D9066E3A7B8DBD5 /* SwiftySound */ = {
 			isa = PBXGroup;
 			children = (
-				BCA7E7DE01A58EABD4926D37E15EF98B /* SwiftFireworks */,
-				7C105127A4E5F71450FFB064460CE861 /* SwiftySound */,
+				876AFD2AF580FC9677F77BE635E094B6 /* Sound.swift */,
+				57FA20968B16CAD1B4C462AAB2E924DF /* Support Files */,
 			);
-			name = Pods;
+			name = SwiftySound;
+			path = SwiftySound;
 			sourceTree = "<group>";
 		};
 		360BBC480826E328F7096AD76295D16E /* Pods-Math Sums Game */ = {
@@ -161,24 +161,38 @@
 			path = "Target Support Files/Pods-Math Sums Game";
 			sourceTree = "<group>";
 		};
-		7BF7850E6CAA197CE4ABCAECD7830A8A /* Products */ = {
+		52F803FCB357DBF9F96A7C0C1B6C7280 /* SwiftFireworks */ = {
 			isa = PBXGroup;
 			children = (
-				0906BD6177761C641A13A7ABC7E6D0AA /* Pods_Math_Sums_Game.framework */,
-				F9F797B01CC67149A28CB03476FA1BF6 /* SwiftFireworks.framework */,
-				996615DEDCD6C2933EC3F8504427765B /* SwiftySound.framework */,
+				21BF21B2489F8CB574ABB8E1CB4A9BA7 /* SwiftFireworks.swift */,
+				BF7F013314EC3FE72A2D7FA9567B4EDD /* Support Files */,
 			);
-			name = Products;
+			name = SwiftFireworks;
+			path = SwiftFireworks;
 			sourceTree = "<group>";
 		};
-		7C105127A4E5F71450FFB064460CE861 /* SwiftySound */ = {
+		57FA20968B16CAD1B4C462AAB2E924DF /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				32DA978808C2043E9101216F54C73352 /* Sound.swift */,
-				08819CEB40F418D879C906A8A07BD9EA /* Support Files */,
+				2F8E5DF2091CA233AE7BA287E90C2D2E /* SwiftySound.modulemap */,
+				777953B0F37BE29E6712CE3E6C87353A /* SwiftySound.xcconfig */,
+				6E06D3CA249794BD4C392A27DD8AEF16 /* SwiftySound-dummy.m */,
+				2AECEC9377F3738419727387661916EE /* SwiftySound-Info.plist */,
+				D516CC0ED57AF8B71A5A951BEE3E778F /* SwiftySound-prefix.pch */,
+				20C9DB007A73FEABADC421823BB12605 /* SwiftySound-umbrella.h */,
 			);
-			name = SwiftySound;
-			path = SwiftySound;
+			name = "Support Files";
+			path = "../Target Support Files/SwiftySound";
+			sourceTree = "<group>";
+		};
+		7397CE2BE39890E512CDD0F7E9DC51E9 /* SwiftGifOrigin */ = {
+			isa = PBXGroup;
+			children = (
+				58702DBDD1B9109D6175481D21EB67ED /* UIImage+Gif.swift */,
+				F927B7F082A927A18EE7539058F0A7F6 /* Support Files */,
+			);
+			name = SwiftGifOrigin;
+			path = SwiftGifOrigin;
 			sourceTree = "<group>";
 		};
 		A92C127359C7325D7ED43FE30124D9DB /* iOS */ = {
@@ -190,14 +204,29 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		BCA7E7DE01A58EABD4926D37E15EF98B /* SwiftFireworks */ = {
+		B9D4DCAAE2C3D57B29176EC66BE98E8C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E5C63BED57039C138CBBEAD9D2F3A89C /* SwiftFireworks.swift */,
-				0D544E6670D5CE41226C7E5424B6B91D /* Support Files */,
+				0906BD6177761C641A13A7ABC7E6D0AA /* Pods_Math_Sums_Game.framework */,
+				F9F797B01CC67149A28CB03476FA1BF6 /* SwiftFireworks.framework */,
+				8E11114EB42D9DA49AD3DCEAD6567E79 /* SwiftGifOrigin.framework */,
+				996615DEDCD6C2933EC3F8504427765B /* SwiftySound.framework */,
 			);
-			name = SwiftFireworks;
-			path = SwiftFireworks;
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BF7F013314EC3FE72A2D7FA9567B4EDD /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D9906BFD3D6C1387B452EC34F8CAFCA6 /* SwiftFireworks.modulemap */,
+				102EDE0979BD0B80043909807052B6DC /* SwiftFireworks.xcconfig */,
+				4BB57C5AD9A36FD6437F73C37B11F21B /* SwiftFireworks-dummy.m */,
+				7BF9791948322AA505304B111CD3B2AC /* SwiftFireworks-Info.plist */,
+				48F1995A1DE082037DD77EF00DEAB3D6 /* SwiftFireworks-prefix.pch */,
+				B139EF30F5BE9DD1830BFC6DEEFF9EA6 /* SwiftFireworks-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftFireworks";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -205,10 +234,34 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
-				1EA80CCA3DD0FA7B79CAD62C440047E7 /* Pods */,
-				7BF7850E6CAA197CE4ABCAECD7830A8A /* Products */,
+				E6E268C8E706B2DDCC6C5704BD3CE796 /* Pods */,
+				B9D4DCAAE2C3D57B29176EC66BE98E8C /* Products */,
 				FF94F2AC4702CDAA93715795855466FE /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		E6E268C8E706B2DDCC6C5704BD3CE796 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				52F803FCB357DBF9F96A7C0C1B6C7280 /* SwiftFireworks */,
+				7397CE2BE39890E512CDD0F7E9DC51E9 /* SwiftGifOrigin */,
+				280F5D07BED480EC9D9066E3A7B8DBD5 /* SwiftySound */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F927B7F082A927A18EE7539058F0A7F6 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9C73B1F804434914D6EA35D84C93AAEA /* SwiftGifOrigin.modulemap */,
+				21C6295AF4E228DA31FA6794DABFCDA4 /* SwiftGifOrigin.xcconfig */,
+				DD6FA2E099A87EFBB223BC08D36C45CE /* SwiftGifOrigin-dummy.m */,
+				3CB2273D77AD845BF220C8F352520B92 /* SwiftGifOrigin-Info.plist */,
+				6D4DD51F358DDFBF91E0BAFED77C8206 /* SwiftGifOrigin-prefix.pch */,
+				35F4C30241F2B1EBC35CB74E9E416A56 /* SwiftGifOrigin-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftGifOrigin";
 			sourceTree = "<group>";
 		};
 		FF94F2AC4702CDAA93715795855466FE /* Targets Support Files */ = {
@@ -238,11 +291,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BC64957AEE7489487CB4611B2041B4D0 /* Headers */ = {
+		E2FC12E5EA774EA3027715ABD0ED2DF5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E0C80BBF67339B089A732B11C6E0B9B3 /* Pods-Math Sums Game-umbrella.h in Headers */,
+				C787A09F86CF612FA4F1E363031918D6 /* Pods-Math Sums Game-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E81EFC3392CB1BBF5061F4F7F2B41563 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8991C75CE8321B02706767B01D29890A /* SwiftGifOrigin-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,22 +312,41 @@
 /* Begin PBXNativeTarget section */
 		398DBA9CA8D2563C992B142B0908E973 /* Pods-Math Sums Game */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 60AB24B81758A5B1554FF49713A24447 /* Build configuration list for PBXNativeTarget "Pods-Math Sums Game" */;
+			buildConfigurationList = 4CEE3D9B57B485C7001F7DB8A4F49741 /* Build configuration list for PBXNativeTarget "Pods-Math Sums Game" */;
 			buildPhases = (
-				BC64957AEE7489487CB4611B2041B4D0 /* Headers */,
-				7A925B22415028BE0438FB3BE95D5C67 /* Sources */,
-				B2C3B41C0DB8B65FE8403CD7350FF2B3 /* Frameworks */,
-				3CF52391D4BD8B7D15F8EDA93B3640F4 /* Resources */,
+				E2FC12E5EA774EA3027715ABD0ED2DF5 /* Headers */,
+				61D1DEDBCAEA53CB34CA5F658819CC15 /* Sources */,
+				285FA06475408AD90C5178917DAA61B4 /* Frameworks */,
+				B77F0BB57B0ABBB1A9B821850761405D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				1698F56325A31FE1BADBF37E0631DFD6 /* PBXTargetDependency */,
-				38FAFC8B0106F59E4CB44B044B2018A2 /* PBXTargetDependency */,
+				0C1D23A85AFB97B4F361541116E02947 /* PBXTargetDependency */,
+				E48F3565A08CD975176E8E7ED68218E6 /* PBXTargetDependency */,
+				55BDA6D27519DD1ECCE3475CF6EE77EF /* PBXTargetDependency */,
 			);
 			name = "Pods-Math Sums Game";
 			productName = "Pods-Math Sums Game";
 			productReference = 0906BD6177761C641A13A7ABC7E6D0AA /* Pods_Math_Sums_Game.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A7F9119A842E66F127E010A97169E4F4 /* SwiftGifOrigin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99A19CAE5BD75E33445174D268501EC6 /* Build configuration list for PBXNativeTarget "SwiftGifOrigin" */;
+			buildPhases = (
+				E81EFC3392CB1BBF5061F4F7F2B41563 /* Headers */,
+				A8EB3FE901BE9442AF03C2DB361C7B9E /* Sources */,
+				C844CEE815202DAC5090EA5A54FCA01C /* Frameworks */,
+				4BE15D81617252BA65FECC14EA3D8A4A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftGifOrigin;
+			productName = SwiftGifOrigin;
+			productReference = 8E11114EB42D9DA49AD3DCEAD6567E79 /* SwiftGifOrigin.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		AF76419D4650F093FFACB1AD713C1EF1 /* SwiftySound */ = {
@@ -323,12 +403,13 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 7BF7850E6CAA197CE4ABCAECD7830A8A /* Products */;
+			productRefGroup = B9D4DCAAE2C3D57B29176EC66BE98E8C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				398DBA9CA8D2563C992B142B0908E973 /* Pods-Math Sums Game */,
 				E83F55830E89CE0BC52C002A055AB9F5 /* SwiftFireworks */,
+				A7F9119A842E66F127E010A97169E4F4 /* SwiftGifOrigin */,
 				AF76419D4650F093FFACB1AD713C1EF1 /* SwiftySound */,
 			);
 		};
@@ -342,7 +423,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3CF52391D4BD8B7D15F8EDA93B3640F4 /* Resources */ = {
+		4BE15D81617252BA65FECC14EA3D8A4A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B77F0BB57B0ABBB1A9B821850761405D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -368,11 +456,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7A925B22415028BE0438FB3BE95D5C67 /* Sources */ = {
+		61D1DEDBCAEA53CB34CA5F658819CC15 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B7146FC99CEACF38A38F14B32140D31 /* Pods-Math Sums Game-dummy.m in Sources */,
+				F2BCF196525AA39F14C11323AE51894F /* Pods-Math Sums Game-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8EB3FE901BE9442AF03C2DB361C7B9E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0141A95DB1F647899CC5D4DB824C065C /* SwiftGifOrigin-dummy.m in Sources */,
+				224BAD87E92E0520DBB7D12E01998F0A /* UIImage+Gif.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,94 +485,28 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1698F56325A31FE1BADBF37E0631DFD6 /* PBXTargetDependency */ = {
+		0C1D23A85AFB97B4F361541116E02947 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftFireworks;
 			target = E83F55830E89CE0BC52C002A055AB9F5 /* SwiftFireworks */;
-			targetProxy = 5EDAC32C47A0D75812DF70C59CB691C5 /* PBXContainerItemProxy */;
+			targetProxy = 1188F7B42996ED1AFADB7D1B7B500EEF /* PBXContainerItemProxy */;
 		};
-		38FAFC8B0106F59E4CB44B044B2018A2 /* PBXTargetDependency */ = {
+		55BDA6D27519DD1ECCE3475CF6EE77EF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftySound;
 			target = AF76419D4650F093FFACB1AD713C1EF1 /* SwiftySound */;
-			targetProxy = 2905380D6C8EB1ED3F7E31EEB3BAE796 /* PBXContainerItemProxy */;
+			targetProxy = 514530ADA8631F45F90E504E0F68452D /* PBXContainerItemProxy */;
+		};
+		E48F3565A08CD975176E8E7ED68218E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftGifOrigin;
+			target = A7F9119A842E66F127E010A97169E4F4 /* SwiftGifOrigin */;
+			targetProxy = C3DC8BBEDD02B4BA7BBD9343965ECE59 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1C47E2CAFCFAFC6EEB6CA8CDACFFE1B3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 44A316563459A5585330626204B54823 /* SwiftFireworks.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftFireworks/SwiftFireworks-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftFireworks/SwiftFireworks-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/SwiftFireworks/SwiftFireworks.modulemap";
-				PRODUCT_MODULE_NAME = SwiftFireworks;
-				PRODUCT_NAME = SwiftFireworks;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		4312025C198760A23349D4B4E4E9EB1E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3A27DC7152BAEA3F3C4ECDC0D7838ED1 /* SwiftySound.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftySound/SwiftySound-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftySound/SwiftySound-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/SwiftySound/SwiftySound.modulemap";
-				PRODUCT_MODULE_NAME = SwiftySound;
-				PRODUCT_NAME = SwiftySound;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.1;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		7E939AEDDAD65AA1B97C74B7E2C74A78 /* Release */ = {
+		0CA7B63CD8DC2C817ED553AC9A2B4189 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DB3CF374AE24A8AF02FE5B9BDD5EAA5D /* Pods-Math Sums Game.release.xcconfig */;
 			buildSettings = {
@@ -513,6 +544,149 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		1C47E2CAFCFAFC6EEB6CA8CDACFFE1B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 102EDE0979BD0B80043909807052B6DC /* SwiftFireworks.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftFireworks/SwiftFireworks-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftFireworks/SwiftFireworks-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftFireworks/SwiftFireworks.modulemap";
+				PRODUCT_MODULE_NAME = SwiftFireworks;
+				PRODUCT_NAME = SwiftFireworks;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4312025C198760A23349D4B4E4E9EB1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 777953B0F37BE29E6712CE3E6C87353A /* SwiftySound.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftySound/SwiftySound-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftySound/SwiftySound-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftySound/SwiftySound.modulemap";
+				PRODUCT_MODULE_NAME = SwiftySound;
+				PRODUCT_NAME = SwiftySound;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		60CB5AEE82B3564FB1DE86FABEEAD045 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21C6295AF4E228DA31FA6794DABFCDA4 /* SwiftGifOrigin.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftGifOrigin/SwiftGifOrigin-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftGifOrigin/SwiftGifOrigin-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftGifOrigin/SwiftGifOrigin.modulemap";
+				PRODUCT_MODULE_NAME = SwiftGifOrigin;
+				PRODUCT_NAME = SwiftGifOrigin;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6B7484ACE84F33E56B26B953971AD760 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21C6295AF4E228DA31FA6794DABFCDA4 /* SwiftGifOrigin.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftGifOrigin/SwiftGifOrigin-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftGifOrigin/SwiftGifOrigin-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftGifOrigin/SwiftGifOrigin.modulemap";
+				PRODUCT_MODULE_NAME = SwiftGifOrigin;
+				PRODUCT_NAME = SwiftGifOrigin;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		939F1A8F6BCEB7F9F64D9EEE50CAE014 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -580,7 +754,7 @@
 		};
 		ACD4B3A23E1F58473921E2EE8A3C7654 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3A27DC7152BAEA3F3C4ECDC0D7838ED1 /* SwiftySound.xcconfig */;
+			baseConfigurationReference = 777953B0F37BE29E6712CE3E6C87353A /* SwiftySound.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -613,7 +787,7 @@
 			};
 			name = Debug;
 		};
-		BC5EE086E6141D4B241FD1F244A07630 /* Debug */ = {
+		CB43CE8C5FE90D4C4FB26F5BDD63001F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 202D6FC1140D78AA622261FD91526499 /* Pods-Math Sums Game.debug.xcconfig */;
 			buildSettings = {
@@ -653,7 +827,7 @@
 		};
 		DD4273CB67D5244E6295D544FA197BC9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 44A316563459A5585330626204B54823 /* SwiftFireworks.xcconfig */;
+			baseConfigurationReference = 102EDE0979BD0B80043909807052B6DC /* SwiftFireworks.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -767,11 +941,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		60AB24B81758A5B1554FF49713A24447 /* Build configuration list for PBXNativeTarget "Pods-Math Sums Game" */ = {
+		4CEE3D9B57B485C7001F7DB8A4F49741 /* Build configuration list for PBXNativeTarget "Pods-Math Sums Game" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BC5EE086E6141D4B241FD1F244A07630 /* Debug */,
-				7E939AEDDAD65AA1B97C74B7E2C74A78 /* Release */,
+				CB43CE8C5FE90D4C4FB26F5BDD63001F /* Debug */,
+				0CA7B63CD8DC2C817ED553AC9A2B4189 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		99A19CAE5BD75E33445174D268501EC6 /* Build configuration list for PBXNativeTarget "SwiftGifOrigin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B7484ACE84F33E56B26B953971AD760 /* Debug */,
+				60CB5AEE82B3564FB1DE86FABEEAD045 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
