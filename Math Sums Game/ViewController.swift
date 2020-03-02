@@ -56,7 +56,7 @@ class ViewController: UIViewController {
     
     lazy var Additionbutton:UIButton = {
         let button = UIButton()
-        button.setBackgroundImage(#imageLiteral(resourceName: "yellow"), for: .normal)
+        button.setBackgroundImage(#imageLiteral(resourceName: "curveYellow"), for: .normal)
         button.titleLabel?.font = UIFont.init(name: "Chalkduster", size: buttonFontSize)
         button.setTitle("+ Addition", for: .normal)
         return button
@@ -64,8 +64,8 @@ class ViewController: UIViewController {
     
     lazy var Substactionbutton:UIButton = {
         let button = UIButton()
-        button.setBackgroundImage(#imageLiteral(resourceName: "yellow"), for: .normal)
-        button.titleLabel?.font = UIFont.init(name: "Chalkduster", size: buttonFontSize)
+        button.setBackgroundImage(#imageLiteral(resourceName: "curveYellow"), for: .normal)
+        button.titleLabel?.font = UIFont.init(name: "Chalkduster", size: buttonFontSize-3)
         button.setTitle("- Subtraction", for: .normal)
         
         return button
@@ -73,15 +73,15 @@ class ViewController: UIViewController {
     
     lazy var Multiplicationbutton:UIButton = {
         let button = UIButton()
-        button.setBackgroundImage(#imageLiteral(resourceName: "yellow"), for: .normal)
-        button.titleLabel?.font = UIFont.init(name: "Chalkduster", size: buttonFontSize)
+        button.setBackgroundImage(#imageLiteral(resourceName: "curveYellow"), for: .normal)
+        button.titleLabel?.font = UIFont.init(name: "Chalkduster", size: buttonFontSize-3)
         button.setTitle("× Multiplication", for: .normal)
         return button
     }()
     
     lazy var Divisionbutton:UIButton = {
         let button = UIButton()
-        button.setBackgroundImage(#imageLiteral(resourceName: "yellow"), for: .normal)
+        button.setBackgroundImage(#imageLiteral(resourceName: "curveYellow"), for: .normal)
         button.titleLabel?.font = UIFont.init(name: "Chalkduster", size: buttonFontSize)
         button.setTitle("÷ Division", for: .normal)
         return button
@@ -120,7 +120,7 @@ class ViewController: UIViewController {
         NSLayoutConstraint.activate([
             stack.trailingAnchor.constraint(equalTo:self.view.trailingAnchor,constant: -40),
             stack.leadingAnchor.constraint(equalTo: self.view.leadingAnchor,constant: 40),
-            stack.heightAnchor.constraint(equalTo: self.view.heightAnchor,multiplier: 0.15),
+            stack.heightAnchor.constraint(equalTo: self.view.heightAnchor,multiplier: 0.20),
             stack.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
         ])
 
