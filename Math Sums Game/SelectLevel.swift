@@ -32,8 +32,13 @@ class SelectLevel: UIViewController {
         Hard.addGestureRecognizer(tap3)
         
         cointext.text = String(UserDefaults.standard.getCoins())
+        back.addTarget(self, action: #selector(backPressed), for: .touchUpInside)
         
         NotificationCenter.default.addObserver(self, selector: #selector(noCoins), name: NSNotification.Name("noCoins"), object: nil)
+    }
+    
+    @objc func backPressed(){
+        self.dismiss(animated: true, completion: nil)
     }
     
     @objc func easyPressed(sender: UIGestureRecognizer) {
@@ -60,6 +65,14 @@ class SelectLevel: UIViewController {
         background.image = bgImage
         return background
     }()
+    
+    
+    lazy var back:UIButton = {
+        let background = UIButton()
+        background.setImage(#imageLiteral(resourceName: "back"), for: .normal)
+        return background
+    }()
+    
     
     lazy var gameTitel:UILabel = {
         let label = UILabel()
@@ -123,6 +136,15 @@ class SelectLevel: UIViewController {
     
     
     func contriant(){
+        view.addSubview(back)
+        back.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            back.topAnchor.constraint(equalTo: self.view.topAnchor,constant: 35),
+            back.leadingAnchor.constraint(equalTo: self.view.leadingAnchor,constant: 35),
+            back.heightAnchor.constraint(equalToConstant: 35),
+            back.widthAnchor.constraint(equalToConstant: 35)
+        ])
+        
         gameTitel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             gameTitel.topAnchor.constraint(equalTo: self.view.topAnchor,constant: 35),
@@ -137,7 +159,7 @@ class SelectLevel: UIViewController {
         
         cointext.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            cointext.topAnchor.constraint(equalTo: self.view.topAnchor,constant: 25),
+            cointext.topAnchor.constraint(equalTo: self.view.topAnchor,constant: 35),
             cointext.trailingAnchor.constraint(equalTo:self.view.trailingAnchor,constant: -10),
             cointext.heightAnchor.constraint(equalToConstant: 35),
             cointext.widthAnchor.constraint(equalToConstant: 50)
@@ -145,7 +167,7 @@ class SelectLevel: UIViewController {
         
         coinImage.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            coinImage.topAnchor.constraint(equalTo: self.view.topAnchor,constant: 25),
+            coinImage.topAnchor.constraint(equalTo: self.view.topAnchor,constant: 35),
             coinImage.trailingAnchor.constraint(equalTo:cointext.leadingAnchor,constant: -0),
             coinImage.heightAnchor.constraint(equalToConstant: 35),
             coinImage.widthAnchor.constraint(equalToConstant: 35)
