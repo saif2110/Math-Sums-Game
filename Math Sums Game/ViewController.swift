@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     
     @objc func soundPressed(){
         if Soundbut.imageView?.image == #imageLiteral(resourceName: "Sound"){
-            Soundbut.setImage(#imageLiteral(resourceName: "SoundOFF"), for: .normal)
+            Soundbut.setImage(#imageLiteral(resourceName: "redSoundOFF"), for: .normal)
         }else{
              Soundbut.setImage(#imageLiteral(resourceName: "Sound"), for: .normal)
         }
