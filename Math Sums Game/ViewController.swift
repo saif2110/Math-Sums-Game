@@ -22,8 +22,17 @@ class ViewController: UIViewController {
         Substactionbutton.addTarget(self, action: #selector(SubstactionbuttonPressed), for: .touchUpInside)
         Multiplicationbutton.addTarget(self, action: #selector(MultiplicationbuttonPressed), for: .touchUpInside)
         Divisionbutton.addTarget(self, action: #selector(DivisionbuttonPressed), for: .touchUpInside)
-        
         cointext.text = String(UserDefaults.standard.getCoins())
+        Soundbut.addTarget(self, action: #selector(soundPressed), for: .touchUpInside)
+    }
+    
+    
+    @objc func soundPressed(){
+        if Soundbut.imageView?.image == #imageLiteral(resourceName: "Sound"){
+            Soundbut.setImage(#imageLiteral(resourceName: "SoundOFF"), for: .normal)
+        }else{
+             Soundbut.setImage(#imageLiteral(resourceName: "Sound"), for: .normal)
+        }
     }
     
     @objc func additionPressed(){

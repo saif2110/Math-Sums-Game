@@ -33,9 +33,9 @@ enum UserDefaultsKeys : String {
 
 func getCost(Diff:String) -> Int{
     if Diff == "Medium" {
-        return 100
+        return 150
     }else{
-        return 200
+        return 250
     }
 }
 
