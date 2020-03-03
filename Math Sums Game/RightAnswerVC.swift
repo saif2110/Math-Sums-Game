@@ -16,6 +16,16 @@ class RightAnswerVC: UIViewController {
         self.view.addSubview(background)
         self.view.addSubview(areYouReady)
         contriant()
+        
+        if difficulty == "Easy"{
+            UserDefaults.standard.setCoins(value: UserDefaults.standard.getCoins() + 5)
+        }else if difficulty == "Medium"{
+            UserDefaults.standard.setCoins(value: UserDefaults.standard.getCoins() + 6)
+        }else{
+            UserDefaults.standard.setCoins(value: UserDefaults.standard.getCoins() + 7)
+        }
+
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             for _ in (0...40){
                 SwiftFireworks.sharedInstance.showFirework(inView: self.view,andPosition: CGPoint(x:Int(arc4random()%1000),y:Int(arc4random()%1000)))

@@ -16,6 +16,17 @@ class WrongAnswerVC: UIViewController {
         self.view.addSubview(sorryLabel)
         self.view.addSubview(ansWas)
         contriant()
+        
+        if UserDefaults.standard.getCoins() >= 5 {
+        if difficulty == "Easy"{
+            UserDefaults.standard.setCoins(value: UserDefaults.standard.getCoins() - 5)
+        }else if difficulty == "Medium"{
+            UserDefaults.standard.setCoins(value: UserDefaults.standard.getCoins() - 3)
+        }else{
+            UserDefaults.standard.setCoins(value: UserDefaults.standard.getCoins() - 2)
+        }
+        }
+        
         backToMainMenu.addTarget(self, action: #selector(backtoMain), for: .touchUpInside)
         playAgain.addTarget(self, action: #selector(playAgainPressed), for: .touchUpInside)
     }

@@ -9,6 +9,7 @@
 import UIKit
 
 var difficulty = "Easy"
+var mathType = ""
 
 class GameEngViewController: UIViewController {
     var result = 0
@@ -24,6 +25,7 @@ class GameEngViewController: UIViewController {
         self.view.addSubview(questonLabel)
         optionsFORarray()
         contriantoFbackGround()
+        cointext.text = String(UserDefaults.standard.getCoins())
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.3) { //1
             self.areYouReady.removeFromSuperview()
             self.constrainofQuestion()
@@ -54,7 +56,7 @@ class GameEngViewController: UIViewController {
         }
         
     }
-
+    
     lazy var background:UIImageView = {
         let background = UIImageView()
         background.image = bgImage
@@ -70,15 +72,6 @@ class GameEngViewController: UIViewController {
         return label
     }()
     
-    lazy var level:UILabel = {
-        let label = UILabel()
-        label.textColor = .white
-        label.textAlignment = .left
-        label.text = "Level 1/30"
-        label.font = UIFont.init(name: "DKCrayonCrumble", size: 25)
-        return label
-    }()
-    
     
     lazy var Time:UILabel = {
         let label = UILabel()
@@ -89,14 +82,6 @@ class GameEngViewController: UIViewController {
         return label
     }()
     
-    lazy var score:UILabel = {
-        let label = UILabel()
-        label.textColor = .white
-        label.textAlignment = .right
-        label.text = "Score 0"
-        label.font = UIFont.init(name: "DKCrayonCrumble", size: 25)
-        return label
-    }()
     
     
     lazy var questonLabel:UILabel = {
@@ -167,7 +152,6 @@ class GameEngViewController: UIViewController {
     
     
     func questionRange(){
-        print(type)
         if type == "Addition"{
             
             if difficulty == "Hard"{
@@ -222,20 +206,34 @@ class GameEngViewController: UIViewController {
         }else if type == "Division"{
             
             if difficulty == "Hard"{
-                a = Int.random(in: 40...90)
-                b = Int.random(in: 10...30)
+                repeat{
+                    a = evenNumberFinder(firstRange: 499, lastRange: 999)
+                    b = evenNumberFinder(firstRange: 100, lastRange: 799)
+                }while a % b != 0
             }else if difficulty == "Medium"{
                 
-                a = Int.random(in: 20...40)
-                b = Int.random(in: 5...9)
+                repeat{
+                    a = evenNumberFinder(firstRange: 200, lastRange: 400)
+                    b = evenNumberFinder(firstRange: 11, lastRange: 299)
+                }while a % b != 0
                 
             }else{
-                a = Int.random(in: 10...30)
-                b = Int.random(in: 1...5)
+                repeat{
+                    a = evenNumberFinder(firstRange: 1, lastRange: 60)
+                    b = evenNumberFinder(firstRange: 1, lastRange: 60)
+                }while a % b != 0
             }
         }
     }
-
+    
+    func evenNumberFinder(firstRange:Int,lastRange:Int) -> Int{
+        var num:Int!
+        repeat {
+            num = Int.random(in: firstRange...lastRange)
+        }while num % 2 != 0
+        return num
+    }
+    
     func optionsFORarray(){
         repeat {
             let a = Int.random(in: -1...4)
@@ -267,16 +265,27 @@ class GameEngViewController: UIViewController {
         
     }
     
+    lazy var coinImage:UIImageView = {
+        let button = UIImageView()
+        button.image = #imageLiteral(resourceName: "coins")
+        return button
+    }()
+    
+    lazy var cointext:UILabel = {
+        let button = UILabel()
+        button.textColor = .orange
+        button.text = "00"
+        return button
+    }()
+    
+    lazy var coinAdd:UIButton = {
+        let button = UIButton()
+        button.setImage(#imageLiteral(resourceName: "plus"), for: .normal)
+        return button
+    }()
+    
+    
     func constrainofQuestion(){
-        
-        view.addSubview(level)
-        level.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            level.topAnchor.constraint(equalTo: self.view.topAnchor,constant: 30),
-            level.leadingAnchor.constraint(equalTo: self.view.leadingAnchor,constant: 50),
-            level.heightAnchor.constraint(equalTo: self.view.heightAnchor,multiplier: 0.15),
-            level.widthAnchor.constraint(equalTo: self.view.widthAnchor,multiplier: 0.3)
-        ])
         
         view.addSubview(Time)
         Time.translatesAutoresizingMaskIntoConstraints = false
@@ -287,15 +296,34 @@ class GameEngViewController: UIViewController {
             Time.widthAnchor.constraint(equalTo: self.view.widthAnchor,multiplier: 0.3)
         ])
         
-        view.addSubview(score)
-        score.translatesAutoresizingMaskIntoConstraints = false
+        
+        view.addSubview(coinImage)
+        view.addSubview(cointext)
+        view.addSubview(coinAdd)
+        
+        cointext.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            score.topAnchor.constraint(equalTo: self.view.topAnchor,constant: 30),
-            score.trailingAnchor.constraint(equalTo: self.view.trailingAnchor,constant: -50),
-            score.heightAnchor.constraint(equalTo: self.view.heightAnchor,multiplier: 0.15),
-            score.widthAnchor.constraint(equalTo: self.view.widthAnchor,multiplier: 0.3)
+            cointext.topAnchor.constraint(equalTo: self.view.topAnchor,constant: 25),
+            cointext.trailingAnchor.constraint(equalTo:self.view.trailingAnchor,constant: -10),
+            cointext.heightAnchor.constraint(equalToConstant: 35),
+            cointext.widthAnchor.constraint(equalToConstant: 50)
         ])
         
+        coinImage.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            coinImage.topAnchor.constraint(equalTo: self.view.topAnchor,constant: 25),
+            coinImage.trailingAnchor.constraint(equalTo:cointext.leadingAnchor,constant: -0),
+            coinImage.heightAnchor.constraint(equalToConstant: 35),
+            coinImage.widthAnchor.constraint(equalToConstant: 35)
+        ])
+        
+        coinAdd.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            coinAdd.centerYAnchor.constraint(equalTo: coinImage.centerYAnchor),
+            coinAdd.trailingAnchor.constraint(equalTo:coinImage.leadingAnchor,constant: -5),
+            coinAdd.heightAnchor.constraint(equalToConstant: 18),
+            coinAdd.widthAnchor.constraint(equalToConstant: 18)
+        ])
         
         view.addSubview(questonLabel)
         questonLabel.translatesAutoresizingMaskIntoConstraints = false

@@ -9,9 +9,6 @@
 import UIKit
 
 class EasyMidHardView: UIView {
-    //var mainDifficulty:String = ""
-    var Score = ""
-    var Level = ""
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -25,6 +22,10 @@ class EasyMidHardView: UIView {
     
     func updateDifficulty(title:String){
         self.difficulty.text = title
+    }
+    
+    func updateCoinslabel(title:String){
+        self.coinsLabel.text = title
     }
     
     func addCusatomView() {
@@ -46,13 +47,13 @@ class EasyMidHardView: UIView {
             difficulty.heightAnchor.constraint(equalTo: ImageVW.heightAnchor, multiplier: 0.3)
         ])
         
-        ImageVW.addSubview(levelLabel)
-        levelLabel.translatesAutoresizingMaskIntoConstraints = false
+        ImageVW.addSubview(coinsLabel)
+        coinsLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            levelLabel.bottomAnchor.constraint(equalTo: ImageVW.bottomAnchor,constant: -15),
-            levelLabel.trailingAnchor.constraint(equalTo:ImageVW.trailingAnchor),
-            levelLabel.leadingAnchor.constraint(equalTo: ImageVW.leadingAnchor),
-            levelLabel.heightAnchor.constraint(equalTo: ImageVW.heightAnchor, multiplier: 0.2)
+            coinsLabel.bottomAnchor.constraint(equalTo: ImageVW.bottomAnchor,constant: -15),
+            coinsLabel.trailingAnchor.constraint(equalTo:ImageVW.trailingAnchor),
+            coinsLabel.leadingAnchor.constraint(equalTo: ImageVW.leadingAnchor),
+            coinsLabel.heightAnchor.constraint(equalTo: ImageVW.heightAnchor, multiplier: 0.2)
         ])
         
     }
@@ -72,22 +73,13 @@ class EasyMidHardView: UIView {
         label.font = UIFont.init(name: "DKCrayonCrumble", size: 35)
         return label
     }()
+
     
-    lazy var ScoreLabel:UILabel = {
+    lazy var coinsLabel:UILabel = {
         let label = UILabel()
         label.textColor = .white
         label.textAlignment = .center
-        label.text = Score
-        label.font = UIFont.init(name: "DKCrayonCrumble", size: 25)
-        return label
-    }()
-    
-    lazy var levelLabel:UILabel = {
-        let label = UILabel()
-        label.textColor = .white
-        label.textAlignment = .center
-        label.text = "Score 200"
-        label.font = UIFont.init(name: "DKCrayonCrumble", size: 25)
+        label.font = UIFont.init(name: "DKCrayonCrumble", size: 20)
         return label
     }()
     

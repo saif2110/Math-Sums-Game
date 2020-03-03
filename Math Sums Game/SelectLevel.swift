@@ -31,13 +31,28 @@ class SelectLevel: UIViewController {
         tap3.addTarget(self, action: #selector(easyPressed(sender:)))
         Hard.addGestureRecognizer(tap3)
         
+        cointext.text = String(UserDefaults.standard.getCoins())
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(noCoins), name: NSNotification.Name("noCoins"), object: nil)
     }
     
     @objc func easyPressed(sender: UIGestureRecognizer) {
-        let vc = GameEngViewController()
-        difficulty = sender.name!
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true, completion: nil)
+        
+        if sender.name! == "Easy"{
+            let vc = GameEngViewController()
+            difficulty = sender.name!
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
+        }else{
+            if UserDefaults.standard.bool(forKey: sender.name!+mathType) == false{
+                self.present(myAlt(titel:"You Want to Unlock The \(sender.name!) Difficulty ?",message:"It will cost you \(getCost(Diff: sender.name!)) Coins",coins:getCost(Diff: sender.name!), Difficulty: sender.name!), animated: true, completion: nil)
+            }else{
+                let vc = GameEngViewController()
+                difficulty = sender.name!
+                vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: true, completion: nil)
+            }
+        }
     }
     
     lazy var background:UIImageView = {
@@ -58,20 +73,54 @@ class SelectLevel: UIViewController {
     lazy var Easy:EasyMidHardView = {
         let button = EasyMidHardView(frame: CGRect(x: 0, y: 0, width: 500, height: 500))
         button.updateDifficulty(title: "Easy")
+        button.updateCoinslabel(title: "🔓 UNLOCKED")
         return button
     }()
     
     lazy var Medium:EasyMidHardView = {
         let button = EasyMidHardView(frame: CGRect(x: 0, y: 0, width: 500, height: 500))
         button.updateDifficulty(title: "Medium")
+        if UserDefaults.standard.bool(forKey: "Medium"+mathType) == true{
+            button.updateCoinslabel(title: "🔓 UNLOCKED")
+        }else{
+            button.updateCoinslabel(title: "🔐 LOCKED")
+        }
+        
         return button
     }()
     
     lazy var Hard:EasyMidHardView = {
         let button = EasyMidHardView(frame: CGRect(x: 0, y: 0, width: 500, height: 500))
         button.updateDifficulty(title: "Hard")
+        
+        if UserDefaults.standard.bool(forKey: "Hard"+mathType) == true{
+            button.updateCoinslabel(title: "🔓 UNLOCKED")
+        }else{
+            button.updateCoinslabel(title: "🔐 LOCKED")
+        }
+        
         return button
     }()
+    
+    lazy var coinImage:UIImageView = {
+        let button = UIImageView()
+        button.image = #imageLiteral(resourceName: "coins")
+        return button
+    }()
+    
+    lazy var cointext:UILabel = {
+        let button = UILabel()
+        button.textColor = .orange
+        button.text = "00"
+        return button
+    }()
+    
+    lazy var coinAdd:UIButton = {
+        let button = UIButton()
+        button.setImage(#imageLiteral(resourceName: "plus"), for: .normal)
+        return button
+    }()
+    
     
     func contriant(){
         gameTitel.translatesAutoresizingMaskIntoConstraints = false
@@ -82,6 +131,34 @@ class SelectLevel: UIViewController {
             gameTitel.heightAnchor.constraint(equalTo: self.view.heightAnchor,multiplier: 0.15)
         ])
         
+        view.addSubview(coinImage)
+        view.addSubview(cointext)
+        view.addSubview(coinAdd)
+        
+        cointext.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            cointext.topAnchor.constraint(equalTo: self.view.topAnchor,constant: 25),
+            cointext.trailingAnchor.constraint(equalTo:self.view.trailingAnchor,constant: -10),
+            cointext.heightAnchor.constraint(equalToConstant: 35),
+            cointext.widthAnchor.constraint(equalToConstant: 50)
+        ])
+        
+        coinImage.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            coinImage.topAnchor.constraint(equalTo: self.view.topAnchor,constant: 25),
+            coinImage.trailingAnchor.constraint(equalTo:cointext.leadingAnchor,constant: -0),
+            coinImage.heightAnchor.constraint(equalToConstant: 35),
+            coinImage.widthAnchor.constraint(equalToConstant: 35)
+        ])
+        
+        coinAdd.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            coinAdd.centerYAnchor.constraint(equalTo: coinImage.centerYAnchor),
+            coinAdd.trailingAnchor.constraint(equalTo:coinImage.leadingAnchor,constant: -5),
+            coinAdd.heightAnchor.constraint(equalToConstant: 18),
+            coinAdd.widthAnchor.constraint(equalToConstant: 18)
+        ])
+        
         background.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             background.trailingAnchor.constraint(equalTo:self.view.trailingAnchor,constant: -5),
@@ -89,7 +166,6 @@ class SelectLevel: UIViewController {
             background.topAnchor.constraint(equalTo: self.view.topAnchor,constant: 5),
             background.bottomAnchor.constraint(equalTo: self.view.bottomAnchor,constant: -5)
         ])
-        
         
         let stack  = UIStackView(arrangedSubviews: [Easy,Medium,Hard])
         stack.alignment = .center
@@ -106,4 +182,19 @@ class SelectLevel: UIViewController {
             stack.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
         ])
     }
+    
+    @objc func noCoins() {
+        let alert = UIAlertController(title: "You Don't Have Enough Coins.", message: "You Dont Have Coins to Unlock this Difficulty.Solve Some Math & try Again.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+            switch action.style{
+            case .default:
+                print("")
+            case .destructive:
+                print("")
+            @unknown default:
+                fatalError()
+            }}))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
 }

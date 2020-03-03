@@ -22,6 +22,8 @@ class ViewController: UIViewController {
         Substactionbutton.addTarget(self, action: #selector(SubstactionbuttonPressed), for: .touchUpInside)
         Multiplicationbutton.addTarget(self, action: #selector(MultiplicationbuttonPressed), for: .touchUpInside)
         Divisionbutton.addTarget(self, action: #selector(DivisionbuttonPressed), for: .touchUpInside)
+        
+        cointext.text = String(UserDefaults.standard.getCoins())
     }
     
     @objc func additionPressed(){
@@ -30,7 +32,7 @@ class ViewController: UIViewController {
         self.present(vc, animated: true, completion: nil)
     }
     @objc func SubstactionbuttonPressed(){
-         mathType = "Substraction"
+        mathType = "Substraction"
         let vc = SelectLevel()
         self.present(vc, animated: true, completion: nil)
     }
@@ -100,6 +102,26 @@ class ViewController: UIViewController {
     }()
     
     
+    lazy var coinImage:UIImageView = {
+        let button = UIImageView()
+        button.image = #imageLiteral(resourceName: "coins")
+        return button
+    }()
+    
+    lazy var cointext:UILabel = {
+        let button = UILabel()
+        button.textColor = .orange
+        button.text = "00"
+        return button
+    }()
+    
+    lazy var coinAdd:UIButton = {
+        let button = UIButton()
+        button.setImage(#imageLiteral(resourceName: "plus"), for: .normal)
+        return button
+    }()
+    
+    
     func contriant(){
         gameTitel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -107,6 +129,34 @@ class ViewController: UIViewController {
             gameTitel.trailingAnchor.constraint(equalTo:self.view.trailingAnchor,constant: -20),
             gameTitel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor,constant: 20),
             gameTitel.heightAnchor.constraint(equalTo: self.view.heightAnchor,multiplier: 0.15)
+        ])
+        
+        view.addSubview(coinImage)
+        view.addSubview(cointext)
+        view.addSubview(coinAdd)
+        
+        cointext.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            cointext.topAnchor.constraint(equalTo: self.view.topAnchor,constant: 25),
+            cointext.trailingAnchor.constraint(equalTo:self.view.trailingAnchor,constant: -10),
+            cointext.heightAnchor.constraint(equalToConstant: 35),
+            cointext.widthAnchor.constraint(equalToConstant: 50)
+        ])
+        
+        coinImage.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            coinImage.topAnchor.constraint(equalTo: self.view.topAnchor,constant: 25),
+            coinImage.trailingAnchor.constraint(equalTo:cointext.leadingAnchor,constant: -0),
+            coinImage.heightAnchor.constraint(equalToConstant: 35),
+            coinImage.widthAnchor.constraint(equalToConstant: 35)
+        ])
+        
+        coinAdd.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            coinAdd.centerYAnchor.constraint(equalTo: coinImage.centerYAnchor),
+            coinAdd.trailingAnchor.constraint(equalTo:coinImage.leadingAnchor,constant: -5),
+            coinAdd.heightAnchor.constraint(equalToConstant: 18),
+            coinAdd.widthAnchor.constraint(equalToConstant: 18)
         ])
         
         let stack  = UIStackView(arrangedSubviews: [Additionbutton,Substactionbutton,Multiplicationbutton,Divisionbutton])
@@ -123,7 +173,7 @@ class ViewController: UIViewController {
             stack.heightAnchor.constraint(equalTo: self.view.heightAnchor,multiplier: 0.20),
             stack.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
         ])
-
+        
         Soundbut.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             Soundbut.heightAnchor.constraint(equalToConstant: 50),
