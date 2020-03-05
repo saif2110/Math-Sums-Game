@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftySound
 
 class ViewController: UIViewController {
     
@@ -24,33 +25,70 @@ class ViewController: UIViewController {
         Divisionbutton.addTarget(self, action: #selector(DivisionbuttonPressed), for: .touchUpInside)
         cointext.text = String(UserDefaults.standard.getCoins())
         Soundbut.addTarget(self, action: #selector(soundPressed), for: .touchUpInside)
+        coinAdd.addTarget(self, action: #selector(showAdpopUP), for: .touchUpInside)
     }
     
+    @objc func showAdpopUP(){
+        let alert = UIAlertController(title: "WATCH A VIDEO", message: "Add 50 Coins by Watching a Video", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "WATCH", style: .default, handler: { action in
+            switch action.style{
+            case .default:
+                print("")
+            case .destructive:
+                print("")
+            case .cancel:
+                print("")
+            @unknown default:
+                fatalError()
+            }}))
+        
+        alert.addAction(UIAlertAction(title: "CANCEL", style: .default, handler: { action in
+        switch action.style{
+        case .default:
+            print("")
+        case .destructive:
+            print("")
+        case .cancel:
+          print("")
+        @unknown default:
+            fatalError()
+        }}))
+        self.present(alert, animated: true, completion: nil)
+    }
+
     
     @objc func soundPressed(){
         if Soundbut.imageView?.image == #imageLiteral(resourceName: "Sound"){
+            UserDefaults.standard.setisbackGroundSoundOn(value: false)
             Soundbut.setImage(#imageLiteral(resourceName: "redSoundOFF"), for: .normal)
+            NotificationCenter.default.post(name:NSNotification.Name("sound"),object: nil)
         }else{
-             Soundbut.setImage(#imageLiteral(resourceName: "Sound"), for: .normal)
+            UserDefaults.standard.setisbackGroundSoundOn(value: true)
+            Soundbut.setImage(#imageLiteral(resourceName: "Sound"), for: .normal)
+            NotificationCenter.default.post(name:NSNotification.Name("sound"),object: nil)
         }
     }
     
     @objc func additionPressed(){
+        Sound.play(file: "pop.mp3")
         mathType = "Addition"
         let vc = SelectLevel()
         self.present(vc, animated: true, completion: nil)
     }
     @objc func SubstactionbuttonPressed(){
+        Sound.play(file: "pop.mp3")
         mathType = "Substraction"
         let vc = SelectLevel()
         self.present(vc, animated: true, completion: nil)
     }
     @objc func MultiplicationbuttonPressed(){
+        Sound.play(file: "pop.mp3")
         mathType = "Multiplication"
         let vc = SelectLevel()
         self.present(vc, animated: true, completion: nil)
     }
     @objc func DivisionbuttonPressed(){
+        Sound.play(file: "pop.mp3")
         mathType = "Division"
         let vc = SelectLevel()
         self.present(vc, animated: true, completion: nil)

@@ -17,10 +17,13 @@
 		5C92C32E2406B6F0008C39E8 /* GameEngViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C92C32D2406B6F0008C39E8 /* GameEngViewController.swift */; };
 		5C92C334240831E3008C39E8 /* EasyMidHardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C92C333240831E3008C39E8 /* EasyMidHardView.swift */; };
 		BFE0413C0D07B82313421D79 /* Pods_Math_Sums_Game.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 517D91DC53901517A5CA6FF9 /* Pods_Math_Sums_Game.framework */; };
+		C906A1362411226D00AB8EAD /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C906A1352411226D00AB8EAD /* background.mp3 */; };
 		C91F085E240D1DC000D1313A /* loder.gif in Resources */ = {isa = PBXBuildFile; fileRef = C91F085D240D1DBE00D1313A /* loder.gif */; };
 		C91F0860240D1E4A00D1313A /* SplshScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91F085F240D1E4A00D1313A /* SplshScreenVC.swift */; };
 		C96AD906240E2CD300BE1D83 /* myModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AD905240E2CD300BE1D83 /* myModel.swift */; };
 		C96AD909240E4E1700BE1D83 /* myAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AD908240E4E1700BE1D83 /* myAlert.swift */; };
+		C97E77C82410D849009CA043 /* firework.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C97E77C42410D849009CA043 /* firework.mp3 */; };
+		C97E77C92410D849009CA043 /* pop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C97E77C52410D849009CA043 /* pop.mp3 */; };
 		C9E7BACF2408EDCE0040058C /* RightAnswerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E7BACE2408EDCE0040058C /* RightAnswerVC.swift */; };
 		C9E7BAD12408FCF30040058C /* WrongAnswerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E7BAD02408FCF30040058C /* WrongAnswerVC.swift */; };
 /* End PBXBuildFile section */
@@ -39,10 +42,13 @@
 		5C92C32D2406B6F0008C39E8 /* GameEngViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEngViewController.swift; sourceTree = "<group>"; };
 		5C92C333240831E3008C39E8 /* EasyMidHardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyMidHardView.swift; sourceTree = "<group>"; };
 		9BF0FFAFB7B72EE01791155E /* Pods-Math Sums Game.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Math Sums Game.debug.xcconfig"; path = "Target Support Files/Pods-Math Sums Game/Pods-Math Sums Game.debug.xcconfig"; sourceTree = "<group>"; };
+		C906A1352411226D00AB8EAD /* background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background.mp3; sourceTree = "<group>"; };
 		C91F085D240D1DBE00D1313A /* loder.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loder.gif; sourceTree = "<group>"; };
 		C91F085F240D1E4A00D1313A /* SplshScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplshScreenVC.swift; sourceTree = "<group>"; };
 		C96AD905240E2CD300BE1D83 /* myModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myModel.swift; sourceTree = "<group>"; };
 		C96AD908240E4E1700BE1D83 /* myAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myAlert.swift; sourceTree = "<group>"; };
+		C97E77C42410D849009CA043 /* firework.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = firework.mp3; sourceTree = "<group>"; };
+		C97E77C52410D849009CA043 /* pop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pop.mp3; sourceTree = "<group>"; };
 		C9E7BACE2408EDCE0040058C /* RightAnswerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightAnswerVC.swift; sourceTree = "<group>"; };
 		C9E7BAD02408FCF30040058C /* WrongAnswerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrongAnswerVC.swift; sourceTree = "<group>"; };
 		ED5641E45053206D1EB78646 /* Pods-Math Sums Game.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Math Sums Game.release.xcconfig"; path = "Target Support Files/Pods-Math Sums Game/Pods-Math Sums Game.release.xcconfig"; sourceTree = "<group>"; };
@@ -89,6 +95,7 @@
 		5C92C31324056F5B008C39E8 /* Math Sums Game */ = {
 			isa = PBXGroup;
 			children = (
+				C97E77C32410D849009CA043 /* AllMP3 */,
 				C96AD907240E326B00BE1D83 /* Model */,
 				5C92C32824057205008C39E8 /* DkCrayonCrumble-ddll.ttf */,
 				C91F085D240D1DBE00D1313A /* loder.gif */,
@@ -124,6 +131,16 @@
 				C96AD905240E2CD300BE1D83 /* myModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		C97E77C32410D849009CA043 /* AllMP3 */ = {
+			isa = PBXGroup;
+			children = (
+				C97E77C42410D849009CA043 /* firework.mp3 */,
+				C906A1352411226D00AB8EAD /* background.mp3 */,
+				C97E77C52410D849009CA043 /* pop.mp3 */,
+			);
+			path = AllMP3;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,9 +204,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C91F085E240D1DC000D1313A /* loder.gif in Resources */,
+				C97E77C82410D849009CA043 /* firework.mp3 in Resources */,
 				5C92C32124056F5C008C39E8 /* LaunchScreen.storyboard in Resources */,
 				5C92C31E24056F5C008C39E8 /* Assets.xcassets in Resources */,
 				5C92C32A24057EA6008C39E8 /* DkCrayonCrumble-ddll.ttf in Resources */,
+				C906A1362411226D00AB8EAD /* background.mp3 in Resources */,
+				C97E77C92410D849009CA043 /* pop.mp3 in Resources */,
 				5C92C31C24056F5B008C39E8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,7 +418,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 959YZPX78D;
+				DEVELOPMENT_TEAM = UQTFTW56RV;
 				INFOPLIST_FILE = "Math Sums Game/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -417,7 +437,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 959YZPX78D;
+				DEVELOPMENT_TEAM = UQTFTW56RV;
 				INFOPLIST_FILE = "Math Sums Game/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

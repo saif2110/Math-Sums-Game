@@ -22,6 +22,8 @@ func myAlt(titel:String,message:String,coins:Int,Difficulty:String)-> UIAlertCon
             }
         case .destructive:
             print("")
+        case .cancel:
+            print("")
         @unknown default:
             fatalError()
         }}))
@@ -32,6 +34,8 @@ func myAlt(titel:String,message:String,coins:Int,Difficulty:String)-> UIAlertCon
               print("")
           case .destructive:
               print("")
+          case .cancel:
+            print("")
           @unknown default:
               fatalError()
           }}))

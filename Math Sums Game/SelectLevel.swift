@@ -26,10 +26,10 @@ class SelectLevel: UIViewController {
         tap2.addTarget(self, action: #selector(easyPressed(sender:)))
         Medium.addGestureRecognizer(tap2)
         
-        let tap3 = UITapGestureRecognizer()
-        tap3.name = "Hard"
-        tap3.addTarget(self, action: #selector(easyPressed(sender:)))
-        Hard.addGestureRecognizer(tap3)
+            let tap3 = UITapGestureRecognizer()
+            tap3.name = "Hard"
+            tap3.addTarget(self, action: #selector(easyPressed(sender:)))
+            Hard.addGestureRecognizer(tap3)
         
         cointext.text = String(UserDefaults.standard.getCoins())
         back.addTarget(self, action: #selector(backPressed), for: .touchUpInside)
@@ -213,10 +213,14 @@ class SelectLevel: UIViewController {
                 print("")
             case .destructive:
                 print("")
+            case .cancel:
+                print("")
             @unknown default:
                 fatalError()
             }}))
         self.present(alert, animated: true, completion: nil)
     }
     
-}
+   }
+
+

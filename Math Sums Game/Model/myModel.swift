@@ -10,6 +10,7 @@ import Foundation
 
 enum UserDefaultsKeys : String {
     case Coins
+    case isbackgroundSoundon
     
     //Addition
     case MediumAddition
@@ -35,7 +36,7 @@ func getCost(Diff:String) -> Int{
     if Diff == "Medium" {
         return 150
     }else{
-        return 250
+        return 1050
     }
 }
 
@@ -49,13 +50,22 @@ extension UserDefaults {
         return integer(forKey: UserDefaultsKeys.Coins.rawValue) 
     }
     
-    //Addition
-    func isAdditonLock(Diff:UserDefaultsKeys)-> Bool {
-        return bool(forKey: Diff.rawValue)
+    
+    func isbackGroundSoundOn()-> Bool {
+        return bool(forKey: UserDefaultsKeys.isbackgroundSoundon.rawValue)
     }
-    func setAdditonLock(Diff:UserDefaultsKeys,value: Bool) {
-        set(value, forKey: Diff.rawValue)
+    func setisbackGroundSoundOn(value: Bool) {
+        set(value, forKey: UserDefaultsKeys.isbackgroundSoundon.rawValue)
     }
+    
+    
+//    //Addition
+//    func isAdditonLock(Diff:UserDefaultsKeys)-> Bool {
+//        return bool(forKey: Diff.rawValue)
+//    }
+//    func setAdditonLock(Diff:UserDefaultsKeys,value: Bool) {
+//        set(value, forKey: Diff.rawValue)
+//    }
     
     
 }

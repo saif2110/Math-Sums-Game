@@ -20,9 +20,9 @@ class RightAnswerVC: UIViewController {
         if difficulty == "Easy"{
             UserDefaults.standard.setCoins(value: UserDefaults.standard.getCoins() + 5)
         }else if difficulty == "Medium"{
-            UserDefaults.standard.setCoins(value: UserDefaults.standard.getCoins() + 6)
+            UserDefaults.standard.setCoins(value: UserDefaults.standard.getCoins() + 25)
         }else{
-            UserDefaults.standard.setCoins(value: UserDefaults.standard.getCoins() + 7)
+            UserDefaults.standard.setCoins(value: UserDefaults.standard.getCoins() + 35)
         }
 
         
