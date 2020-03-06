@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftySound
 var resoneforLosss = "Sorry, Your Answer is Wrong 😔"
 class WrongAnswerVC: UIViewController {
     
@@ -32,6 +33,7 @@ class WrongAnswerVC: UIViewController {
     }
     
     @objc func playAgainPressed() {
+        Sound.play(file: "pop.mp3")
         DispatchQueue.main.asyncAfter(deadline: .now()) {
             self.dismiss(animated: true) {
                 let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -42,6 +44,7 @@ class WrongAnswerVC: UIViewController {
     
     
     @objc func backtoMain() {
+        Sound.play(file: "pop.mp3")
         self.dismiss(animated: false) {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let signInViewController = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController

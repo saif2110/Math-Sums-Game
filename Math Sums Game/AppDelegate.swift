@@ -37,5 +37,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             Sound.stopAll()
         }
     }
+    
+    
+   
 }
 

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftySound
 
 var difficulty = "Easy"
 var mathType = ""
@@ -31,6 +32,11 @@ class GameEngViewController: UIViewController {
             self.constrainofQuestion()
             self.timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.updateCounter), userInfo: nil, repeats: true)
         }
+        coinAdd.addTarget(self, action: #selector(showAdpopUP), for: .touchUpInside)
+    }
+    
+    @objc func showAdpopUP(){
+       self.present(showVideoAds(), animated: true, completion: nil)
     }
     
     
@@ -60,6 +66,12 @@ class GameEngViewController: UIViewController {
     lazy var background:UIImageView = {
         let background = UIImageView()
         background.image = bgImage
+        return background
+    }()
+    
+    lazy var back:UIButton = {
+        let background = UIButton()
+        background.setImage(#imageLiteral(resourceName: "back"), for: .normal)
         return background
     }()
     
@@ -235,14 +247,30 @@ class GameEngViewController: UIViewController {
     }
     
     func optionsFORarray(){
+        var numTill = 1;
+        
+        if difficulty == "Hard"{
+            numTill = 1;
+            
+        }else if difficulty == "Medium"{
+            numTill = 1;
+            
+        }else{
+            numTill = 2;
+            
+        }
+        
         repeat {
             let a = Int.random(in: -1...4)
             resultArray.append(result + a)
             resultArray = Array(Set(resultArray))
             resultArray = resultArray.filter { $0 != result }
-        } while resultArray.count <= 1;
+        } while resultArray.count <= numTill;
         resultArray.append(result)
-        resultArray.append(result+10)
+        counter = 15
+        if difficulty != "Easy"{
+            resultArray.append(result+10)
+        }
         resultArray.shuffle()
     }
     
@@ -286,6 +314,15 @@ class GameEngViewController: UIViewController {
     
     
     func constrainofQuestion(){
+        
+        //        view.addSubview(back)
+        //        back.translatesAutoresizingMaskIntoConstraints = false
+        //        NSLayoutConstraint.activate([
+        //            back.topAnchor.constraint(equalTo: self.view.topAnchor,constant: 35),
+        //            back.leadingAnchor.constraint(equalTo: self.view.leadingAnchor,constant: 35),
+        //            back.heightAnchor.constraint(equalToConstant: 35),
+        //            back.widthAnchor.constraint(equalToConstant: 35)
+        //        ])
         
         view.addSubview(Time)
         Time.translatesAutoresizingMaskIntoConstraints = false
@@ -358,6 +395,7 @@ class GameEngViewController: UIViewController {
     }
     
     @objc func Ans1(){
+        Sound.play(file: "pop.mp3")
         timer.invalidate()
         if  rightorWronmg(ButText: AnsButton1.titleLabel!.text!) {
             self.dismiss(animated: false) {
@@ -374,6 +412,7 @@ class GameEngViewController: UIViewController {
     }
     
     @objc func Ans2(){
+        Sound.play(file: "pop.mp3")
         timer.invalidate()
         if  rightorWronmg(ButText: AnsButton2.titleLabel!.text!) {
             self.dismiss(animated: false) {
@@ -391,6 +430,7 @@ class GameEngViewController: UIViewController {
     }
     
     @objc func Ans3(){
+        Sound.play(file: "pop.mp3")
         timer.invalidate()
         if  rightorWronmg(ButText: AnsButton3.titleLabel!.text!) {
             self.dismiss(animated: false) {
@@ -408,6 +448,7 @@ class GameEngViewController: UIViewController {
     }
     
     @objc func Ans4(){
+        Sound.play(file: "pop.mp3")
         timer.invalidate()
         if  rightorWronmg(ButText: AnsButton4.titleLabel!.text!) {
             self.dismiss(animated: false) {

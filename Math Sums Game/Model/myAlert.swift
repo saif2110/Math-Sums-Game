@@ -44,6 +44,37 @@ func myAlt(titel:String,message:String,coins:Int,Difficulty:String)-> UIAlertCon
 
 
 
+
+func showVideoAds()-> UIAlertController{
+       let alert = UIAlertController(title: "WATCH A VIDEO", message: "Add 70 Coins by Watching a Video", preferredStyle: .alert)
+              alert.addAction(UIAlertAction(title: "WATCH", style: .default, handler: { action in
+                  switch action.style{
+                  case .default:
+                      print("")
+                  case .destructive:
+                      print("")
+                  case .cancel:
+                      print("")
+                  @unknown default:
+                      fatalError()
+                  }}))
+              
+           alert.addAction(UIAlertAction(title: "CANCEL", style: .default, handler: { action in
+                    switch action.style{
+                    case .default:
+                        print("")
+                    case .destructive:
+                        print("")
+                    case .cancel:
+                      print("")
+                    @unknown default:
+                        fatalError()
+                    }}))
+        return alert
+   }
+
+
+
 //copy paste this
 
 //self.present(myAlt(titel:"Failure",message:"Something went wrong."), animated: true, completion: nil)

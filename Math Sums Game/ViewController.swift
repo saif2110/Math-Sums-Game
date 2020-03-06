@@ -29,31 +29,7 @@ class ViewController: UIViewController {
     }
     
     @objc func showAdpopUP(){
-        let alert = UIAlertController(title: "WATCH A VIDEO", message: "Add 50 Coins by Watching a Video", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "WATCH", style: .default, handler: { action in
-            switch action.style{
-            case .default:
-                print("")
-            case .destructive:
-                print("")
-            case .cancel:
-                print("")
-            @unknown default:
-                fatalError()
-            }}))
-        
-        alert.addAction(UIAlertAction(title: "CANCEL", style: .default, handler: { action in
-        switch action.style{
-        case .default:
-            print("")
-        case .destructive:
-            print("")
-        case .cancel:
-          print("")
-        @unknown default:
-            fatalError()
-        }}))
-        self.present(alert, animated: true, completion: nil)
+       self.present(showVideoAds(), animated: true, completion: nil)
     }
 
     

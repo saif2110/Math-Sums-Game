@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftFireworks
+import SwiftySound
 
 class RightAnswerVC: UIViewController {
     
@@ -27,6 +28,10 @@ class RightAnswerVC: UIViewController {
 
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            Sound.play(file: "firework.mp3")
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                Sound.play(file: "firework.mp3")
+            }
             for _ in (0...40){
                 SwiftFireworks.sharedInstance.showFirework(inView: self.view,andPosition: CGPoint(x:Int(arc4random()%1000),y:Int(arc4random()%1000)))
             }
