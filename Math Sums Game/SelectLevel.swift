@@ -8,8 +8,14 @@
 
 import UIKit
 import SwiftySound
+import GoogleMobileAds
 
-class SelectLevel: UIViewController {
+class SelectLevel: UIViewController,GADRewardBasedVideoAdDelegate{
+   func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd, didRewardUserWith reward: GADAdReward) {
+         UserDefaults.standard.setCoins(value: UserDefaults.standard.getCoins() + 70)
+         cointext.text = String(UserDefaults.standard.getCoins())
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,10 +43,16 @@ class SelectLevel: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(noCoins), name: NSNotification.Name("noCoins"), object: nil)
         coinAdd.addTarget(self, action: #selector(showAdpopUP), for: .touchUpInside)
-    }
+        ShowAd(selfo: self, showAdafterSecound: 0)
+        GADRewardBasedVideoAd.sharedInstance().delegate = self
+        }
+        
+        func rewardBasedVideoAdDidCompletePlaying(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
+             UserDefaults.standard.setCoins(value: UserDefaults.standard.getCoins() + 70)
+        }
     
     @objc func showAdpopUP(){
-       self.present(showVideoAds(), animated: true, completion: nil)
+       self.present(showVideoAds(slf: self), animated: true, completion: nil)
     }
         
         @objc func backPressed(){

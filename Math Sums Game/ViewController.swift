@@ -7,9 +7,15 @@
 //
 
 import UIKit
+import GoogleMobileAds
 import SwiftySound
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,GADRewardBasedVideoAdDelegate {
+    
+    func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd, didRewardUserWith reward: GADAdReward) {
+         UserDefaults.standard.setCoins(value: UserDefaults.standard.getCoins() + 70)
+         cointext.text = String(UserDefaults.standard.getCoins())
+    }
     
     @IBOutlet weak var backgroundImage: UIImageView!
     
@@ -26,12 +32,13 @@ class ViewController: UIViewController {
         cointext.text = String(UserDefaults.standard.getCoins())
         Soundbut.addTarget(self, action: #selector(soundPressed), for: .touchUpInside)
         coinAdd.addTarget(self, action: #selector(showAdpopUP), for: .touchUpInside)
-    }
-    
-    @objc func showAdpopUP(){
-       self.present(showVideoAds(), animated: true, completion: nil)
+        LoadIntrest()
+        GADRewardBasedVideoAd.sharedInstance().delegate = self
     }
 
+    @objc func showAdpopUP(){
+        self.present(showVideoAds(slf: self), animated: true, completion: nil)
+    }
     
     @objc func soundPressed(){
         if Soundbut.imageView?.image == #imageLiteral(resourceName: "Sound"){

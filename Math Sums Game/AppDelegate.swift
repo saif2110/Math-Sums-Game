@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftySound
+import GoogleMobileAds
 
 var gameName  = "Math Sums Learner for Kids"
 var buttonFontSize:CGFloat = 17.0
@@ -23,6 +24,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.6) {
             Sound.play(file: "background.mp3",numberOfLoops: 1000)
         }
+        
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
+        GADRewardBasedVideoAd.sharedInstance().load(GADRequest(),
+        withAdUnitID: "ca-app-pub-2710347124980493/2882497565")
+
         return true
     }
     

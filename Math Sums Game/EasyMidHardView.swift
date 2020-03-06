@@ -13,7 +13,6 @@ class EasyMidHardView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         addCusatomView()
-        
     }
     
     required init(coder aDecoder: NSCoder) {

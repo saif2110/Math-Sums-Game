@@ -4,6 +4,7 @@
 //
 
 import Foundation
+import GoogleMobileAds
 import UIKit
 
 
@@ -45,12 +46,22 @@ func myAlt(titel:String,message:String,coins:Int,Difficulty:String)-> UIAlertCon
 
 
 
-func showVideoAds()-> UIAlertController{
+func showVideoAds(slf:UIViewController)-> UIAlertController{
        let alert = UIAlertController(title: "WATCH A VIDEO", message: "Add 70 Coins by Watching a Video", preferredStyle: .alert)
               alert.addAction(UIAlertAction(title: "WATCH", style: .default, handler: { action in
                   switch action.style{
                   case .default:
-                      print("")
+                    
+                    if GADRewardBasedVideoAd.sharedInstance().isReady == true {
+                      GADRewardBasedVideoAd.sharedInstance().present(fromRootViewController: slf)
+                        
+                        GADRewardBasedVideoAd.sharedInstance().load(GADRequest(),
+                        withAdUnitID: "ca-app-pub-2710347124980493/2882497565")
+                    }else{
+                        GADRewardBasedVideoAd.sharedInstance().load(GADRequest(),
+                        withAdUnitID: "ca-app-pub-2710347124980493/2882497565")
+                    }
+                    
                   case .destructive:
                       print("")
                   case .cancel:

@@ -8,11 +8,17 @@
 
 import UIKit
 import SwiftySound
+import GoogleMobileAds
 
 var difficulty = "Easy"
 var mathType = ""
 
-class GameEngViewController: UIViewController {
+class GameEngViewController: UIViewController,GADRewardBasedVideoAdDelegate {
+   func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd, didRewardUserWith reward: GADAdReward) {
+         UserDefaults.standard.setCoins(value: UserDefaults.standard.getCoins() + 70)
+         cointext.text = String(UserDefaults.standard.getCoins())
+    }
+    
     var result = 0
     var resultArray = [Int]()
     var counter = 15
@@ -33,10 +39,14 @@ class GameEngViewController: UIViewController {
             self.timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.updateCounter), userInfo: nil, repeats: true)
         }
         coinAdd.addTarget(self, action: #selector(showAdpopUP), for: .touchUpInside)
+        GADRewardBasedVideoAd.sharedInstance().delegate = self
     }
     
+    func rewardBasedVideoAdDidCompletePlaying(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
+        UserDefaults.standard.setCoins(value: UserDefaults.standard.getCoins() + 70)
+    }
     @objc func showAdpopUP(){
-       self.present(showVideoAds(), animated: true, completion: nil)
+        self.present(showVideoAds(slf: self), animated: true, completion: nil)
     }
     
     

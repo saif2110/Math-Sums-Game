@@ -30,6 +30,7 @@ class WrongAnswerVC: UIViewController {
         
         backToMainMenu.addTarget(self, action: #selector(backtoMain), for: .touchUpInside)
         playAgain.addTarget(self, action: #selector(playAgainPressed), for: .touchUpInside)
+        ShowAd(selfo: self, showAdafterSecound: 1)
     }
     
     @objc func playAgainPressed() {

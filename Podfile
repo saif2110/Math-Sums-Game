@@ -9,4 +9,5 @@ target 'Math Sums Game' do
   pod 'SwiftySound', '~> 1.2'
 pod "SwiftFireworks"
 pod 'SwiftGifOrigin', '~> 1.7'
+pod 'Google-Mobile-Ads-SDK'
 end
