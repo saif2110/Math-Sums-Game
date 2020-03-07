@@ -35,21 +35,21 @@ class WrongAnswerVC: UIViewController {
     
     @objc func playAgainPressed() {
         Sound.play(file: "pop.mp3")
-        DispatchQueue.main.asyncAfter(deadline: .now()) {
-            self.dismiss(animated: true) {
+            DispatchQueue.main.asyncAfter(deadline: .now()) {
+           
                 let appDelegate = UIApplication.shared.delegate as! AppDelegate
                 appDelegate.window?.rootViewController = GameEngViewController()
-            }
+               self.dismiss(animated: true, completion: nil)
         }
     }
     
     
     @objc func backtoMain() {
         Sound.play(file: "pop.mp3")
-        self.dismiss(animated: false) {
+        
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let signInViewController = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
-            self.present(signInViewController, animated: false, completion: nil)        }
+            self.present(signInViewController, animated: false, completion: nil)
     }
     
     lazy var background:UIImageView = {

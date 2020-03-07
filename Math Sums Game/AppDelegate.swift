@@ -10,7 +10,7 @@ import UIKit
 import SwiftySound
 import GoogleMobileAds
 
-var gameName  = "Math Sums Learner for Kids"
+var gameName  = "Kids Maths Learner & Solver"
 var buttonFontSize:CGFloat = 17.0
 var bgImage = #imageLiteral(resourceName: "bg")
 var answerWas = ""
@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GADMobileAds.sharedInstance().start(completionHandler: nil)
         GADRewardBasedVideoAd.sharedInstance().load(GADRequest(),
         withAdUnitID: "ca-app-pub-2710347124980493/2882497565")
-
+        //UserDefaults.standard.setCoins(value:9000)
         return true
     }
     

@@ -14,9 +14,9 @@ var difficulty = "Easy"
 var mathType = ""
 
 class GameEngViewController: UIViewController,GADRewardBasedVideoAdDelegate {
-   func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd, didRewardUserWith reward: GADAdReward) {
-         UserDefaults.standard.setCoins(value: UserDefaults.standard.getCoins() + 70)
-         cointext.text = String(UserDefaults.standard.getCoins())
+    func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd, didRewardUserWith reward: GADAdReward) {
+        UserDefaults.standard.setCoins(value: UserDefaults.standard.getCoins() + 70)
+        cointext.text = String(UserDefaults.standard.getCoins())
     }
     
     var result = 0
@@ -33,7 +33,7 @@ class GameEngViewController: UIViewController,GADRewardBasedVideoAdDelegate {
         optionsFORarray()
         contriantoFbackGround()
         cointext.text = String(UserDefaults.standard.getCoins())
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.3) { //1
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.3) {
             self.areYouReady.removeFromSuperview()
             self.constrainofQuestion()
             self.timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.updateCounter), userInfo: nil, repeats: true)
@@ -45,6 +45,7 @@ class GameEngViewController: UIViewController,GADRewardBasedVideoAdDelegate {
     func rewardBasedVideoAdDidCompletePlaying(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
         UserDefaults.standard.setCoins(value: UserDefaults.standard.getCoins() + 70)
     }
+    
     @objc func showAdpopUP(){
         self.present(showVideoAds(slf: self), animated: true, completion: nil)
     }
@@ -325,15 +326,6 @@ class GameEngViewController: UIViewController,GADRewardBasedVideoAdDelegate {
     
     func constrainofQuestion(){
         
-        //        view.addSubview(back)
-        //        back.translatesAutoresizingMaskIntoConstraints = false
-        //        NSLayoutConstraint.activate([
-        //            back.topAnchor.constraint(equalTo: self.view.topAnchor,constant: 35),
-        //            back.leadingAnchor.constraint(equalTo: self.view.leadingAnchor,constant: 35),
-        //            back.heightAnchor.constraint(equalToConstant: 35),
-        //            back.widthAnchor.constraint(equalToConstant: 35)
-        //        ])
-        
         view.addSubview(Time)
         Time.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -408,16 +400,16 @@ class GameEngViewController: UIViewController,GADRewardBasedVideoAdDelegate {
         Sound.play(file: "pop.mp3")
         timer.invalidate()
         if  rightorWronmg(ButText: AnsButton1.titleLabel!.text!) {
-            self.dismiss(animated: false) {
-                let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                appDelegate.window?.rootViewController = RightAnswerVC()
-            }
+            
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.window?.rootViewController = RightAnswerVC()
+            self.dismiss(animated: true, completion: nil)
         }else{
-            self.dismiss(animated: false) {
-                resoneforLosss = "Sorry, Your Answer is Wrong 😔"
-                let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                appDelegate.window?.rootViewController = WrongAnswerVC()
-            }
+            
+            resoneforLosss = "Sorry, Your Answer is Wrong 😔"
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.window?.rootViewController = WrongAnswerVC()
+            self.dismiss(animated: true, completion: nil)
         }
     }
     
@@ -425,16 +417,16 @@ class GameEngViewController: UIViewController,GADRewardBasedVideoAdDelegate {
         Sound.play(file: "pop.mp3")
         timer.invalidate()
         if  rightorWronmg(ButText: AnsButton2.titleLabel!.text!) {
-            self.dismiss(animated: false) {
-                let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                appDelegate.window?.rootViewController = RightAnswerVC()
-            }
+            
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.window?.rootViewController = RightAnswerVC()
+            self.dismiss(animated: true, completion: nil)
         }else{
-            self.dismiss(animated: false) {
-                resoneforLosss = "Sorry, Your Answer is Wrong 😔"
-                let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                appDelegate.window?.rootViewController = WrongAnswerVC()
-            }
+            
+            resoneforLosss = "Sorry, Your Answer is Wrong 😔"
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.window?.rootViewController = WrongAnswerVC()
+            self.dismiss(animated: true, completion: nil)
         }
         
     }
@@ -443,16 +435,16 @@ class GameEngViewController: UIViewController,GADRewardBasedVideoAdDelegate {
         Sound.play(file: "pop.mp3")
         timer.invalidate()
         if  rightorWronmg(ButText: AnsButton3.titleLabel!.text!) {
-            self.dismiss(animated: false) {
-                let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                appDelegate.window?.rootViewController = RightAnswerVC()
-            }
+            
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.window?.rootViewController = RightAnswerVC()
+            self.dismiss(animated: true, completion: nil)
         }else{
-            self.dismiss(animated: false) {
-                resoneforLosss = "Sorry, Your Answer is Wrong 😔"
-                let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                appDelegate.window?.rootViewController = WrongAnswerVC()
-            }
+            
+            resoneforLosss = "Sorry, Your Answer is Wrong 😔"
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.window?.rootViewController = WrongAnswerVC()
+            self.dismiss(animated: true, completion: nil)
         }
         
     }
@@ -461,16 +453,16 @@ class GameEngViewController: UIViewController,GADRewardBasedVideoAdDelegate {
         Sound.play(file: "pop.mp3")
         timer.invalidate()
         if  rightorWronmg(ButText: AnsButton4.titleLabel!.text!) {
-            self.dismiss(animated: false) {
-                let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                appDelegate.window?.rootViewController = RightAnswerVC()
-            }
+            
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.window?.rootViewController = RightAnswerVC()
+            self.dismiss(animated: true, completion: nil)
         }else{
-            self.dismiss(animated: false) {
-                resoneforLosss = "Sorry, Your Answer is Wrong 😔"
-                let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                appDelegate.window?.rootViewController = WrongAnswerVC()
-            }
+            
+            resoneforLosss = "Sorry, Your Answer is Wrong 😔"
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.window?.rootViewController = WrongAnswerVC()
+            self.dismiss(animated: true, completion: nil)
         }
         
     }

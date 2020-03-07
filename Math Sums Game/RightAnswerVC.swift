@@ -38,10 +38,10 @@ class RightAnswerVC: UIViewController {
         }
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
-            self.dismiss(animated: true) {
+           
               let appDelegate = UIApplication.shared.delegate as! AppDelegate
               appDelegate.window?.rootViewController = GameEngViewController()
-            }
+            self.dismiss(animated: true, completion: nil)
         }
     }
     
