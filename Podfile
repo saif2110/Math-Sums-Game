@@ -10,4 +10,5 @@ target 'Math Sums Game' do
 pod "SwiftFireworks"
 pod 'SwiftGifOrigin', '~> 1.7'
 pod 'Google-Mobile-Ads-SDK'
+pod 'Firebase/Analytics'
 end

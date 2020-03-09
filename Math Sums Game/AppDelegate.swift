@@ -9,8 +9,9 @@
 import UIKit
 import SwiftySound
 import GoogleMobileAds
+import Firebase
 
-var gameName  = "Kids Maths Learner & Solver"
+var gameName  = "Maths Solver & Learner Game"
 var buttonFontSize:CGFloat = 17.0
 var bgImage = #imageLiteral(resourceName: "bg")
 var answerWas = ""
@@ -29,6 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GADRewardBasedVideoAd.sharedInstance().load(GADRequest(),
         withAdUnitID: "ca-app-pub-2710347124980493/2882497565")
         //UserDefaults.standard.setCoins(value:9000)
+        FirebaseApp.configure()
         return true
     }
     

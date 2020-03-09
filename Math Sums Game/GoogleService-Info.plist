@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>799973501425-lquj28n5akf7suaib4bhi1chagcafbmm.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.799973501425-lquj28n5akf7suaib4bhi1chagcafbmm</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCsNg57ZMkyh2iNkHFz46ccgt6DbTLJQjM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>799973501425</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.Math-Sums-Game</string>
+	<key>PROJECT_ID</key>
+	<string>math-game-c5772</string>
+	<key>STORAGE_BUCKET</key>
+	<string>math-game-c5772.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:799973501425:ios:8ca8e470e7619ed08a3c50</string>
+	<key>DATABASE_URL</key>
+	<string>https://math-game-c5772.firebaseio.com</string>
+</dict>
+</plist>
