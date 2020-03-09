@@ -34,6 +34,10 @@ class ViewController: UIViewController,GADRewardBasedVideoAdDelegate {
         coinAdd.addTarget(self, action: #selector(showAdpopUP), for: .touchUpInside)
         LoadIntrest()
         GADRewardBasedVideoAd.sharedInstance().delegate = self
+
+        if CountNumberofTimesAppOpen() == 50 || CountNumberofTimesAppOpen() == 100{
+            rateApp()
+        }
     }
 
     @objc func showAdpopUP(){
@@ -213,6 +217,7 @@ class ViewController: UIViewController,GADRewardBasedVideoAdDelegate {
         ])
         
     }
+    
     
     
 }

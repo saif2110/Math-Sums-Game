@@ -9,13 +9,14 @@
 import UIKit
 import SwiftySound
 import GoogleMobileAds
+import StoreKit
 
 class SelectLevel: UIViewController,GADRewardBasedVideoAdDelegate{
    func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd, didRewardUserWith reward: GADAdReward) {
          UserDefaults.standard.setCoins(value: UserDefaults.standard.getCoins() + 70)
          cointext.text = String(UserDefaults.standard.getCoins())
     }
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
