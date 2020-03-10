@@ -11,7 +11,7 @@ import SwiftySound
 import GoogleMobileAds
 import Firebase
 
-var gameName  = "Maths Solver & Learner Game"
+var gameName  = "Math Solver & Learner Game"
 var buttonFontSize:CGFloat = 17.0
 var bgImage = #imageLiteral(resourceName: "bg")
 var answerWas = ""

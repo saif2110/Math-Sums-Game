@@ -17,6 +17,7 @@ class ViewController: UIViewController,GADRewardBasedVideoAdDelegate {
          cointext.text = String(UserDefaults.standard.getCoins())
     }
     
+    
     @IBOutlet weak var backgroundImage: UIImageView!
     
     override func viewDidLoad() {
@@ -34,10 +35,10 @@ class ViewController: UIViewController,GADRewardBasedVideoAdDelegate {
         coinAdd.addTarget(self, action: #selector(showAdpopUP), for: .touchUpInside)
         LoadIntrest()
         GADRewardBasedVideoAd.sharedInstance().delegate = self
-
-        if CountNumberofTimesAppOpen() == 50 || CountNumberofTimesAppOpen() == 100{
+        if CountNumberofTimesAppOpen() == 20 || CountNumberofTimesAppOpen() == 60 {
             rateApp()
         }
+        
     }
 
     @objc func showAdpopUP(){
@@ -215,10 +216,5 @@ class ViewController: UIViewController,GADRewardBasedVideoAdDelegate {
             Soundbut.bottomAnchor.constraint(equalTo: self.view.bottomAnchor,constant: -35),
             Soundbut.centerXAnchor.constraint(equalTo: self.view.centerXAnchor,constant: 0)
         ])
-        
     }
-    
-    
-    
 }
-
