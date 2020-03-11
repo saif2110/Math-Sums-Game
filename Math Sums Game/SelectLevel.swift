@@ -44,7 +44,6 @@ class SelectLevel: UIViewController,GADRewardBasedVideoAdDelegate{
         
         NotificationCenter.default.addObserver(self, selector: #selector(noCoins), name: NSNotification.Name("noCoins"), object: nil)
         coinAdd.addTarget(self, action: #selector(showAdpopUP), for: .touchUpInside)
-        ShowAd(selfo: self, showAdafterSecound: 0)
         GADRewardBasedVideoAd.sharedInstance().delegate = self
         }
         

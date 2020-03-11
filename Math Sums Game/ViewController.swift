@@ -38,7 +38,7 @@ class ViewController: UIViewController,GADRewardBasedVideoAdDelegate {
         if CountNumberofTimesAppOpen() == 20 || CountNumberofTimesAppOpen() == 60 {
             rateApp()
         }
-        
+
     }
 
     @objc func showAdpopUP(){
