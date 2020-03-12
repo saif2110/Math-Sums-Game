@@ -91,7 +91,6 @@ class SelectLevel: UIViewController,GADRewardBasedVideoAdDelegate{
             return background
         }()
         
-        
         lazy var gameTitel:UILabel = {
             let label = UILabel()
             label.textColor = .white
@@ -152,12 +151,11 @@ class SelectLevel: UIViewController,GADRewardBasedVideoAdDelegate{
             return button
         }()
         
-        
         func contriant(){
             view.addSubview(back)
             back.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([
-                back.topAnchor.constraint(equalTo: self.view.topAnchor,constant: 35),
+                back.topAnchor.constraint(equalTo: self.view.topAnchor,constant: coinPlacement+10),
                 back.leadingAnchor.constraint(equalTo: self.view.leadingAnchor,constant: 35),
                 back.heightAnchor.constraint(equalToConstant: 35),
                 back.widthAnchor.constraint(equalToConstant: 35)
@@ -177,7 +175,7 @@ class SelectLevel: UIViewController,GADRewardBasedVideoAdDelegate{
             
             cointext.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([
-                cointext.topAnchor.constraint(equalTo: self.view.topAnchor,constant: 35),
+                cointext.topAnchor.constraint(equalTo: self.view.topAnchor,constant: coinPlacement),
                 cointext.trailingAnchor.constraint(equalTo:self.view.trailingAnchor,constant: -10),
                 cointext.heightAnchor.constraint(equalToConstant: 35),
                 cointext.widthAnchor.constraint(equalToConstant: 50)
@@ -185,7 +183,7 @@ class SelectLevel: UIViewController,GADRewardBasedVideoAdDelegate{
             
             coinImage.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([
-                coinImage.topAnchor.constraint(equalTo: self.view.topAnchor,constant: 35),
+                coinImage.topAnchor.constraint(equalTo: self.view.topAnchor,constant: coinPlacement),
                 coinImage.trailingAnchor.constraint(equalTo:cointext.leadingAnchor,constant: -0),
                 coinImage.heightAnchor.constraint(equalToConstant: 35),
                 coinImage.widthAnchor.constraint(equalToConstant: 35)

@@ -62,10 +62,10 @@ class GameEngViewController: UIViewController,GADRewardBasedVideoAdDelegate {
                 counter = 15
                 timer.invalidate()
                 resoneforLosss = "Sorry, Your Time is Over 😔"
-                self.dismiss(animated: false) {
-                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                    appDelegate.window?.rootViewController = WrongAnswerVC()
-                }
+                
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                appDelegate.window?.rootViewController = WrongAnswerVC()
+                self.dismiss(animated: true, completion: nil)
             }else{
                 Time.textColor = .white
             }
@@ -329,12 +329,11 @@ class GameEngViewController: UIViewController,GADRewardBasedVideoAdDelegate {
         view.addSubview(Time)
         Time.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            Time.topAnchor.constraint(equalTo: self.view.topAnchor,constant: 35),
+            Time.topAnchor.constraint(equalTo: self.view.topAnchor,constant: coinPlacement+10),
             Time.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
             Time.heightAnchor.constraint(equalToConstant: 60),
             Time.widthAnchor.constraint(equalTo: self.view.widthAnchor,multiplier: 0.3)
         ])
-        
         
         view.addSubview(coinImage)
         view.addSubview(cointext)
@@ -342,7 +341,7 @@ class GameEngViewController: UIViewController,GADRewardBasedVideoAdDelegate {
         
         cointext.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            cointext.topAnchor.constraint(equalTo: self.view.topAnchor,constant: 25),
+            cointext.topAnchor.constraint(equalTo: self.view.topAnchor,constant: coinPlacement),
             cointext.trailingAnchor.constraint(equalTo:self.view.trailingAnchor,constant: -10),
             cointext.heightAnchor.constraint(equalToConstant: 35),
             cointext.widthAnchor.constraint(equalToConstant: 50)
@@ -350,7 +349,7 @@ class GameEngViewController: UIViewController,GADRewardBasedVideoAdDelegate {
         
         coinImage.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            coinImage.topAnchor.constraint(equalTo: self.view.topAnchor,constant: 25),
+            coinImage.topAnchor.constraint(equalTo: self.view.topAnchor,constant: coinPlacement),
             coinImage.trailingAnchor.constraint(equalTo:cointext.leadingAnchor,constant: -0),
             coinImage.heightAnchor.constraint(equalToConstant: 35),
             coinImage.widthAnchor.constraint(equalToConstant: 35)
@@ -393,7 +392,6 @@ class GameEngViewController: UIViewController,GADRewardBasedVideoAdDelegate {
         AnsButton2.addTarget(self, action: #selector(Ans2), for: .touchUpInside)
         AnsButton3.addTarget(self, action: #selector(Ans3), for: .touchUpInside)
         AnsButton4.addTarget(self, action: #selector(Ans4), for: .touchUpInside)
-        
     }
     
     @objc func Ans1(){

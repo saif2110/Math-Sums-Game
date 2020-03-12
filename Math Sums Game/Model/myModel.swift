@@ -13,6 +13,7 @@ enum UserDefaultsKeys : String {
     case Coins
     case isbackgroundSoundon
     case numberOFtimeAppOpen
+    case isipad
 }
 
 func getCost(Diff:String) -> Int{
@@ -42,6 +43,13 @@ extension UserDefaults {
     }
     func getnumberOFtimeAppOpen() -> Int{
         return integer(forKey: UserDefaultsKeys.numberOFtimeAppOpen.rawValue)
+    }
+    
+    func isisipad()-> Bool {
+        return bool(forKey: UserDefaultsKeys.isipad.rawValue)
+    }
+    func setisipad(value: Bool) {
+        set(value, forKey: UserDefaultsKeys.isipad.rawValue)
     }
 }
 

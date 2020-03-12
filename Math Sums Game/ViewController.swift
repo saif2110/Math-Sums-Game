@@ -17,7 +17,6 @@ class ViewController: UIViewController,GADRewardBasedVideoAdDelegate {
          cointext.text = String(UserDefaults.standard.getCoins())
     }
     
-    
     @IBOutlet weak var backgroundImage: UIImageView!
     
     override func viewDidLoad() {
@@ -38,7 +37,6 @@ class ViewController: UIViewController,GADRewardBasedVideoAdDelegate {
         if CountNumberofTimesAppOpen() == 20 || CountNumberofTimesAppOpen() == 60 {
             rateApp()
         }
-
     }
 
     @objc func showAdpopUP(){
@@ -172,7 +170,7 @@ class ViewController: UIViewController,GADRewardBasedVideoAdDelegate {
         
         cointext.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            cointext.topAnchor.constraint(equalTo: self.view.topAnchor,constant: 25),
+            cointext.topAnchor.constraint(equalTo: self.view.topAnchor,constant: coinPlacement),
             cointext.trailingAnchor.constraint(equalTo:self.view.trailingAnchor,constant: -10),
             cointext.heightAnchor.constraint(equalToConstant: 35),
             cointext.widthAnchor.constraint(equalToConstant: 50)
@@ -180,7 +178,7 @@ class ViewController: UIViewController,GADRewardBasedVideoAdDelegate {
         
         coinImage.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            coinImage.topAnchor.constraint(equalTo: self.view.topAnchor,constant: 25),
+            coinImage.topAnchor.constraint(equalTo: self.view.topAnchor,constant: coinPlacement),
             coinImage.trailingAnchor.constraint(equalTo:cointext.leadingAnchor,constant: -0),
             coinImage.heightAnchor.constraint(equalToConstant: 35),
             coinImage.widthAnchor.constraint(equalToConstant: 35)
