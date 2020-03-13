@@ -33,7 +33,7 @@ class WrongAnswerVC: UIViewController,GADInterstitialDelegate{
         backToMainMenu.addTarget(self, action: #selector(backtoMain), for: .touchUpInside)
         playAgain.addTarget(self, action: #selector(playAgainPressed), for: .touchUpInside)
         
-        ShowAd(selfo: self, showAdafterSecound: 1.3)
+        ShowAd(selfo: self, showAdafterSecound: 1.0)
     }
     
     @objc func playAgainPressed() {
