@@ -22,6 +22,7 @@
 		C906A1362411226D00AB8EAD /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C906A1352411226D00AB8EAD /* background.mp3 */; };
 		C91F085E240D1DC000D1313A /* loder.gif in Resources */ = {isa = PBXBuildFile; fileRef = C91F085D240D1DBE00D1313A /* loder.gif */; };
 		C91F0860240D1E4A00D1313A /* SplshScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91F085F240D1E4A00D1313A /* SplshScreenVC.swift */; };
+		C95A7859241B7EA800E5DB61 /* clap.wav in Resources */ = {isa = PBXBuildFile; fileRef = C95A7858241B7EA800E5DB61 /* clap.wav */; };
 		C96AD906240E2CD300BE1D83 /* myModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AD905240E2CD300BE1D83 /* myModel.swift */; };
 		C96AD909240E4E1700BE1D83 /* myAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AD908240E4E1700BE1D83 /* myAlert.swift */; };
 		C97E77C82410D849009CA043 /* firework.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C97E77C42410D849009CA043 /* firework.mp3 */; };
@@ -49,6 +50,7 @@
 		C906A1352411226D00AB8EAD /* background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background.mp3; sourceTree = "<group>"; };
 		C91F085D240D1DBE00D1313A /* loder.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loder.gif; sourceTree = "<group>"; };
 		C91F085F240D1E4A00D1313A /* SplshScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplshScreenVC.swift; sourceTree = "<group>"; };
+		C95A7858241B7EA800E5DB61 /* clap.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = clap.wav; sourceTree = "<group>"; };
 		C96AD905240E2CD300BE1D83 /* myModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myModel.swift; sourceTree = "<group>"; };
 		C96AD908240E4E1700BE1D83 /* myAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myAlert.swift; sourceTree = "<group>"; };
 		C97E77C42410D849009CA043 /* firework.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = firework.mp3; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 		C97E77C32410D849009CA043 /* AllMP3 */ = {
 			isa = PBXGroup;
 			children = (
+				C95A7858241B7EA800E5DB61 /* clap.wav */,
 				C97E77C42410D849009CA043 /* firework.mp3 */,
 				C906A1352411226D00AB8EAD /* background.mp3 */,
 				C97E77C52410D849009CA043 /* pop.mp3 */,
@@ -209,6 +212,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C95A7859241B7EA800E5DB61 /* clap.wav in Resources */,
 				C91F085E240D1DC000D1313A /* loder.gif in Resources */,
 				C97E77C82410D849009CA043 /* firework.mp3 in Resources */,
 				5C92C32124056F5C008C39E8 /* LaunchScreen.storyboard in Resources */,

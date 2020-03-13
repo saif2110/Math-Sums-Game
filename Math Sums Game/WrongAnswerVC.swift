@@ -8,9 +8,11 @@
 
 import UIKit
 import SwiftySound
+import GoogleMobileAds
+
 var resoneforLosss = "Sorry, Your Answer is Wrong 😔"
-class WrongAnswerVC: UIViewController {
-    
+class WrongAnswerVC: UIViewController,GADInterstitialDelegate{
+    var interstitial: GADInterstitial!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(background)
@@ -19,37 +21,37 @@ class WrongAnswerVC: UIViewController {
         contriant()
         
         if UserDefaults.standard.getCoins() >= 5 {
-        if difficulty == "Easy"{
-            UserDefaults.standard.setCoins(value: UserDefaults.standard.getCoins() - 5)
-        }else if difficulty == "Medium"{
-            UserDefaults.standard.setCoins(value: UserDefaults.standard.getCoins() - 3)
-        }else{
-            UserDefaults.standard.setCoins(value: UserDefaults.standard.getCoins() - 2)
-        }
+            if difficulty == "Easy"{
+                UserDefaults.standard.setCoins(value: UserDefaults.standard.getCoins() - 5)
+            }else if difficulty == "Medium"{
+                UserDefaults.standard.setCoins(value: UserDefaults.standard.getCoins() - 3)
+            }else{
+                UserDefaults.standard.setCoins(value: UserDefaults.standard.getCoins() - 2)
+            }
         }
         
         backToMainMenu.addTarget(self, action: #selector(backtoMain), for: .touchUpInside)
         playAgain.addTarget(self, action: #selector(playAgainPressed), for: .touchUpInside)
-        ShowAd(selfo: self, showAdafterSecound: 1)
+        
+        ShowAd(selfo: self, showAdafterSecound: 1.3)
     }
     
     @objc func playAgainPressed() {
         Sound.play(file: "pop.mp3")
-            DispatchQueue.main.asyncAfter(deadline: .now()) {
-           
-                let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                appDelegate.window?.rootViewController = GameEngViewController()
-               self.dismiss(animated: true, completion: nil)
+        DispatchQueue.main.asyncAfter(deadline: .now()) {
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.window?.rootViewController = GameEngViewController()
+            self.dismiss(animated: true, completion: nil)
         }
     }
     
     
     @objc func backtoMain() {
         Sound.play(file: "pop.mp3")
-        
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let signInViewController = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
-            self.present(signInViewController, animated: false, completion: nil)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let signInViewController = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        signInViewController.isADdisplayed = true
+        self.present(signInViewController, animated: false, completion: nil)
     }
     
     lazy var background:UIImageView = {
@@ -133,4 +135,5 @@ class WrongAnswerVC: UIViewController {
         ])
         
     }
+    
 }

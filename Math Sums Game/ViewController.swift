@@ -11,7 +11,7 @@ import GoogleMobileAds
 import SwiftySound
 
 class ViewController: UIViewController,GADRewardBasedVideoAdDelegate {
-    
+    var isADdisplayed = false
     func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd, didRewardUserWith reward: GADAdReward) {
          UserDefaults.standard.setCoins(value: UserDefaults.standard.getCoins() + 70)
          cointext.text = String(UserDefaults.standard.getCoins())
@@ -37,6 +37,9 @@ class ViewController: UIViewController,GADRewardBasedVideoAdDelegate {
         
         if CountNumberofTimesAppOpen() == 13 || CountNumberofTimesAppOpen() == 25 || CountNumberofTimesAppOpen() == 60 {
             rateApp()
+        }
+        if !isADdisplayed {
+            ShowAd(selfo: self, showAdafterSecound: 1.3)
         }
     }
 

@@ -25,10 +25,11 @@ class RightAnswerVC: UIViewController {
         }else{
             UserDefaults.standard.setCoins(value: UserDefaults.standard.getCoins() + 35)
         }
-
+        
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            Sound.play(file: "firework.mp3")
+            Sound.play(file: "clap.wav")
+           // Sound.play(file: "firework.mp3")
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                 Sound.play(file: "firework.mp3")
             }
@@ -41,7 +42,7 @@ class RightAnswerVC: UIViewController {
            
               let appDelegate = UIApplication.shared.delegate as! AppDelegate
               appDelegate.window?.rootViewController = GameEngViewController()
-            self.dismiss(animated: true, completion: nil)
+              self.dismiss(animated: true, completion: nil)
         }
     }
     

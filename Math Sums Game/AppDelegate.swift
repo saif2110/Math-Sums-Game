@@ -32,6 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GADRewardBasedVideoAd.sharedInstance().load(GADRequest(),
         withAdUnitID: "ca-app-pub-2710347124980493/2882497565")
         //UserDefaults.standard.setCoins(value:9000)
+        LoadIntrest()
         mobileType()
         FirebaseApp.configure()
 

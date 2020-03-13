@@ -20,10 +20,5 @@ class SplshScreenVC: UIViewController {
             secondVC.modalPresentationStyle = .fullScreen
             self.present(secondVC, animated: true, completion: nil)
         }
-        
     }
-    
-
-    
-
 }
