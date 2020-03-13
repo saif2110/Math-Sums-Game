@@ -46,20 +46,18 @@ func myAlt(titel:String,message:String,coins:Int,Difficulty:String)-> UIAlertCon
 
 
 
-func showVideoAds(slf:UIViewController)-> UIAlertController{
+func showVideoAds(slf:UIViewController)-> UIAlertController {
        let alert = UIAlertController(title: "WATCH A VIDEO", message: "Add 70 Coins by Watching a Video", preferredStyle: .alert)
               alert.addAction(UIAlertAction(title: "WATCH", style: .default, handler: { action in
                   switch action.style{
                   case .default:
                     
                     if GADRewardBasedVideoAd.sharedInstance().isReady == true {
-                      GADRewardBasedVideoAd.sharedInstance().present(fromRootViewController: slf)
-                        
-                        GADRewardBasedVideoAd.sharedInstance().load(GADRequest(),
-                        withAdUnitID: "ca-app-pub-2710347124980493/2882497565")
+                        GADRewardBasedVideoAd.sharedInstance().present(fromRootViewController: slf)
                     }else{
+                        print("Video Ad Not Ready")
                         GADRewardBasedVideoAd.sharedInstance().load(GADRequest(),
-                        withAdUnitID: "ca-app-pub-2710347124980493/2882497565")
+                        withAdUnitID: testVideoad)
                     }
                     
                   case .destructive:

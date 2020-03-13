@@ -29,8 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         GADMobileAds.sharedInstance().start(completionHandler: nil)
-        GADRewardBasedVideoAd.sharedInstance().load(GADRequest(),
-        withAdUnitID: "ca-app-pub-2710347124980493/2882497565")
+        GADRewardBasedVideoAd.sharedInstance().load(GADRequest(),withAdUnitID: testVideoad)
         //UserDefaults.standard.setCoins(value:9000)
         LoadIntrest()
         mobileType()

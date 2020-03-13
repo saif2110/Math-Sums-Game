@@ -12,6 +12,7 @@ import SwiftySound
 
 class ViewController: UIViewController,GADRewardBasedVideoAdDelegate {
     var isADdisplayed = false
+    
     func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd, didRewardUserWith reward: GADAdReward) {
          UserDefaults.standard.setCoins(value: UserDefaults.standard.getCoins() + 70)
          cointext.text = String(UserDefaults.standard.getCoins())
@@ -45,6 +46,7 @@ class ViewController: UIViewController,GADRewardBasedVideoAdDelegate {
 
     @objc func showAdpopUP(){
         self.present(showVideoAds(slf: self), animated: true, completion: nil)
+        GADRewardBasedVideoAd.sharedInstance().load(GADRequest(),withAdUnitID: testVideoad)
     }
     
     @objc func soundPressed(){

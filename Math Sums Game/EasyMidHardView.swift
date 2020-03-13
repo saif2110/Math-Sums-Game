@@ -23,8 +23,9 @@ class EasyMidHardView: UIView {
         self.difficulty.text = title
     }
     
-    func updateCoinslabel(title:String){
+    func updateCoinslabel(title:String,colour:UIColor = .white){
         self.coinsLabel.text = title
+        self.coinsLabel.textColor = colour
     }
     
     func addCusatomView() {

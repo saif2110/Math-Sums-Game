@@ -53,6 +53,7 @@ class SelectLevel: UIViewController,GADRewardBasedVideoAdDelegate{
     
     @objc func showAdpopUP(){
        self.present(showVideoAds(slf: self), animated: true, completion: nil)
+        GADRewardBasedVideoAd.sharedInstance().load(GADRequest(),withAdUnitID: testVideoad)
     }
         
         @objc func backPressed(){
@@ -113,7 +114,7 @@ class SelectLevel: UIViewController,GADRewardBasedVideoAdDelegate{
             if UserDefaults.standard.bool(forKey: "Medium"+mathType) == true{
                 button.updateCoinslabel(title: "🔓 UNLOCKED")
             }else{
-                button.updateCoinslabel(title: "🔐 LOCKED")
+                button.updateCoinslabel(title: "🔐 LOCKED",colour: .red)
             }
             
             return button
@@ -126,7 +127,7 @@ class SelectLevel: UIViewController,GADRewardBasedVideoAdDelegate{
             if UserDefaults.standard.bool(forKey: "Hard"+mathType) == true{
                 button.updateCoinslabel(title: "🔓 UNLOCKED")
             }else{
-                button.updateCoinslabel(title: "🔐 LOCKED")
+                button.updateCoinslabel(title: "🔐 LOCKED",colour: .red)
             }
             
             return button

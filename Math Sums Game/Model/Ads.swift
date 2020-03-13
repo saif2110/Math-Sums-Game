@@ -10,8 +10,13 @@ import Foundation
 import GoogleMobileAds
 import UIKit
 
-//let testIntrest = "ca-app-pub-3940256099942544/4411468910" //Test
-let testIntrest = "ca-app-pub-2710347124980493/3401372318" //Mine
+let testIntrest = "ca-app-pub-3940256099942544/4411468910"      //Test
+//let testIntrest = "ca-app-pub-2710347124980493/3401372318"    //Mine
+
+let testVideoad = "ca-app-pub-3940256099942544/5224354917"      //Test
+//let testVideoad = "ca-app-pub-2710347124980493/2882497565"    //Mine
+
+
 
 public var interstitial: GADInterstitial!
 func LoadIntrest() {
