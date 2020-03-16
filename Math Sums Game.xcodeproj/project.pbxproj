@@ -33,7 +33,7 @@
 
 /* Begin PBXFileReference section */
 		517D91DC53901517A5CA6FF9 /* Pods_Math_Sums_Game.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Math_Sums_Game.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5C92C31124056F5B008C39E8 /* Math Sums Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Math Sums Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C92C31124056F5B008C39E8 /* Math Solver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Math Solver.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C92C31424056F5B008C39E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C92C31824056F5B008C39E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5C92C31B24056F5B008C39E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -93,7 +93,7 @@
 		5C92C31224056F5B008C39E8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5C92C31124056F5B008C39E8 /* Math Sums Game.app */,
+				5C92C31124056F5B008C39E8 /* Math Solver.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -171,7 +171,7 @@
 			);
 			name = "Math Sums Game";
 			productName = "Math Sums Game";
-			productReference = 5C92C31124056F5B008C39E8 /* Math Sums Game.app */;
+			productReference = 5C92C31124056F5B008C39E8 /* Math Solver.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -440,7 +440,7 @@
 				);
 				MARKETING_VERSION = 3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Math-Sums-Game";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Math Solver";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -462,7 +462,7 @@
 				);
 				MARKETING_VERSION = 3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Math-Sums-Game";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Math Solver";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

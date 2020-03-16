@@ -24,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         UserDefaults.standard.setisbackGroundSoundOn(value: true)
         NotificationCenter.default.addObserver(self, selector: #selector(soundPlay), name: NSNotification.Name("sound"), object: nil)
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.6) {
             Sound.play(file: "background.mp3",numberOfLoops: 1000)
         }

@@ -61,7 +61,9 @@ class SelectLevel: UIViewController,GADRewardBasedVideoAdDelegate{
         }
         
         @objc func easyPressed(sender: UIGestureRecognizer) {
+            
             Sound.play(file: "pop.mp3")
+            
             if sender.name! == "Easy"{
                 let vc = GameEngViewController()
                 difficulty = sender.name!
