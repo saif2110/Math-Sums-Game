@@ -14,8 +14,8 @@ class ViewController: UIViewController,GADRewardBasedVideoAdDelegate {
     var isADdisplayed = false
     
     func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd, didRewardUserWith reward: GADAdReward) {
-         UserDefaults.standard.setCoins(value: UserDefaults.standard.getCoins() + 70)
-         cointext.text = String(UserDefaults.standard.getCoins())
+        UserDefaults.standard.setCoins(value: UserDefaults.standard.getCoins() + 70)
+        cointext.text = String(UserDefaults.standard.getCoins())
     }
     
     @IBOutlet weak var backgroundImage: UIImageView!
@@ -36,14 +36,66 @@ class ViewController: UIViewController,GADRewardBasedVideoAdDelegate {
         LoadIntrest()
         GADRewardBasedVideoAd.sharedInstance().delegate = self
         
-        if CountNumberofTimesAppOpen() == 13 || CountNumberofTimesAppOpen() == 25 || CountNumberofTimesAppOpen() == 60 {
-            rateApp()
+        if !UserDefaults.standard.isRated() {
+            
+         if CountNumberofTimesAppOpen() == 5 || CountNumberofTimesAppOpen() == 15 || CountNumberofTimesAppOpen() == 20 || CountNumberofTimesAppOpen() == 25 || CountNumberofTimesAppOpen() == 30 {
+            
+            view.addSubview(LikeView)
+            LikeView.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([
+                LikeView.widthAnchor.constraint(equalTo: self.view.widthAnchor,multiplier: 1),
+                LikeView.heightAnchor.constraint(equalTo: self.view.heightAnchor,multiplier: 1),
+                LikeView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+                LikeView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
+                
+        ])
+        
+       
+        LikeView.isUserInteractionEnabled = true
+        
+        let tap = UITapGestureRecognizer()
+        tap.name = "remideMe"
+        tap.addTarget(self, action: #selector(easyPressed(sender:)))
+        LikeView.remideMe.addGestureRecognizer(tap)
+        
+        let tap2 = UITapGestureRecognizer()
+        tap2.name = "likeClick"
+        tap2.addTarget(self, action: #selector(easyPressed(sender:)))
+        LikeView.likeClick.addGestureRecognizer(tap2)
+        
+        let tap3 = UITapGestureRecognizer()
+        tap3.name = "DislikeClick"
+        tap3.addTarget(self, action: #selector(easyPressed(sender:)))
+        LikeView.DislikeClick.addGestureRecognizer(tap3)
+       
+            }
         }
+        
+        
         if !isADdisplayed {
             ShowAd(selfo: self, showAdafterSecound: 1.3)
         }
     }
-
+    
+    @objc func easyPressed(sender: UIGestureRecognizer){
+        if sender.name == "remideMe" {
+        LikeView.removeFromSuperview()
+        }else if sender.name == "likeClick" {
+            rateApp()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.LikeView.removeFromSuperview()
+            }
+            UserDefaults.standard.setisRated(value: true)
+        }else{
+            LikeView.removeFromSuperview()
+        }
+    }
+    
+    lazy var LikeView:Likedislikepop = {
+        let button = Likedislikepop(frame: CGRect(x: 0, y: 0, width: 500, height: 500))
+        return button
+    }()
+    
     @objc func showAdpopUP(){
         self.present(showVideoAds(slf: self), animated: true, completion: nil)
         GADRewardBasedVideoAd.sharedInstance().load(GADRequest(),withAdUnitID: testVideoad)

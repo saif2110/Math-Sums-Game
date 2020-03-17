@@ -15,10 +15,12 @@ class SplshScreenVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         imageGIF.loadGif(name: "loder")
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
             let secondVC = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
             secondVC.modalPresentationStyle = .fullScreen
             self.present(secondVC, animated: true, completion: nil)
         }
     }
+
 }

@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5C92C31024056F5A008C39E8"
-               BuildableName = "Math Sums Game.app"
+               BuildableName = "Math Solver.app"
                BlueprintName = "Math Sums Game"
                ReferencedContainer = "container:Math Sums Game.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5C92C31024056F5A008C39E8"
-            BuildableName = "Math Sums Game.app"
+            BuildableName = "Math Solver.app"
             BlueprintName = "Math Sums Game"
             ReferencedContainer = "container:Math Sums Game.xcodeproj">
          </BuildableReference>
@@ -69,7 +69,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5C92C31024056F5A008C39E8"
-            BuildableName = "Math Sums Game.app"
+            BuildableName = "Math Solver.app"
             BlueprintName = "Math Sums Game"
             ReferencedContainer = "container:Math Sums Game.xcodeproj">
          </BuildableReference>

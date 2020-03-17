@@ -11,8 +11,7 @@ import SwiftySound
 import GoogleMobileAds
 
 var resoneforLosss = "Sorry, Your Answer is Wrong 😔"
-class WrongAnswerVC: UIViewController,GADInterstitialDelegate{
-    var interstitial: GADInterstitial!
+class WrongAnswerVC: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(background)
@@ -44,7 +43,6 @@ class WrongAnswerVC: UIViewController,GADInterstitialDelegate{
             self.dismiss(animated: true, completion: nil)
         }
     }
-    
     
     @objc func backtoMain() {
         Sound.play(file: "pop.mp3")

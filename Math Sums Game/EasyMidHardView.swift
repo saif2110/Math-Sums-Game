@@ -74,7 +74,6 @@ class EasyMidHardView: UIView {
         return label
     }()
 
-    
     lazy var coinsLabel:UILabel = {
         let label = UILabel()
         label.textColor = .white

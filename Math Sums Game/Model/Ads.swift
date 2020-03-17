@@ -10,11 +10,11 @@ import Foundation
 import GoogleMobileAds
 import UIKit
 
-let testIntrest = "ca-app-pub-3940256099942544/4411468910"      //Test
-//let testIntrest = "ca-app-pub-2710347124980493/3401372318"    //Mine
+//let testIntrest = "ca-app-pub-3940256099942544/4411468910"      //Test
+let testIntrest = "ca-app-pub-2710347124980493/3401372318"    //Mine
 
-let testVideoad = "ca-app-pub-3940256099942544/5224354917"      //Test
-//let testVideoad = "ca-app-pub-2710347124980493/2882497565"    //Mine
+//let testVideoad = "ca-app-pub-3940256099942544/5224354917"      //Test
+let testVideoad = "ca-app-pub-2710347124980493/2882497565"    //Mine
 
 
 
@@ -29,6 +29,7 @@ func ShowAd(selfo:UIViewController,showAdafterSecound:Double){
     DispatchQueue.main.asyncAfter(deadline: .now() + showAdafterSecound) {
     if interstitial.isReady {
         interstitial.present(fromRootViewController: selfo)
+        LoadIntrest()
     } else {
         print("Ad wasn't ready")
         LoadIntrest()

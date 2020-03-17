@@ -13,6 +13,7 @@ enum UserDefaultsKeys : String {
     case Coins
     case isbackgroundSoundon
     case numberOFtimeAppOpen
+    case isRated
     case isipad
 }
 
@@ -50,6 +51,13 @@ extension UserDefaults {
     }
     func setisipad(value: Bool) {
         set(value, forKey: UserDefaultsKeys.isipad.rawValue)
+    }
+    
+    func isRated()-> Bool {
+        return bool(forKey: UserDefaultsKeys.isRated.rawValue)
+    }
+    func setisRated(value: Bool) {
+        set(value, forKey: UserDefaultsKeys.isRated.rawValue)
     }
 }
 
