@@ -68,7 +68,7 @@ class Likedislikepop: UIView {
         let label = UILabel()
         label.text = "👍"
         label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: 30)
+        label.font = UIFont.systemFont(ofSize: 25)
         label.backgroundColor =  #colorLiteral(red: 0.7828933982, green: 0.8862745166, blue: 0.7046857251, alpha: 1)
         return label
     }()
@@ -78,7 +78,7 @@ class Likedislikepop: UIView {
         let label = UILabel()
         label.text = "👎"
         label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: 30)
+        label.font = UIFont.systemFont(ofSize: 25)
         label.backgroundColor =  #colorLiteral(red: 0.9098039269, green: 0.7442120744, blue: 0.8460278749, alpha: 1)
         return label
     }()
@@ -145,8 +145,8 @@ class Likedislikepop: UIView {
         NSLayoutConstraint.activate([
             likeemoji.topAnchor.constraint(equalTo: line.bottomAnchor,constant: 8),
             likeemoji.leadingAnchor.constraint(equalTo: whiteView.leadingAnchor,constant: 10),
-            likeemoji.heightAnchor.constraint(equalToConstant: 50),
-            likeemoji.widthAnchor.constraint(equalToConstant: 50),
+            likeemoji.heightAnchor.constraint(equalToConstant: 40),
+            likeemoji.widthAnchor.constraint(equalToConstant: 40),
         ])
         
         whiteView.addSubview(likeClick)
@@ -172,8 +172,8 @@ class Likedislikepop: UIView {
         NSLayoutConstraint.activate([
             dislike.topAnchor.constraint(equalTo: line2.bottomAnchor,constant: 5),
             dislike.leadingAnchor.constraint(equalTo: whiteView.leadingAnchor,constant: 10),
-            dislike.heightAnchor.constraint(equalToConstant: 50),
-            dislike.widthAnchor.constraint(equalToConstant: 50),
+            dislike.heightAnchor.constraint(equalToConstant: 40),
+            dislike.widthAnchor.constraint(equalToConstant: 40),
         ])
         
         whiteView.addSubview(DislikeClick)
