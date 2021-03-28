@@ -8,6 +8,7 @@
 
 import Foundation
 import StoreKit
+import AppTrackingTransparency
 
 enum UserDefaultsKeys : String {
     case Coins
@@ -80,3 +81,26 @@ func CountNumberofTimesAppOpen() -> Int{
     }
     
 }
+
+
+func requestPermission() {
+    if #available(iOS 14, *) {
+        ATTrackingManager.requestTrackingAuthorization(completionHandler: { (status) in
+            switch status {
+            case .authorized:
+                print("authorized")
+                break
+            case .denied:
+                print("Denied")
+                break
+            case .notDetermined:
+                print("Not Determined")
+            case .restricted:
+                print("Restricted")
+            @unknown default:
+                print("Unknown")
+            }
+        })
+    }
+}
+

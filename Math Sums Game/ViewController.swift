@@ -59,8 +59,9 @@ class ViewController: UIViewController {
             rateApp()
         }
         
+        requestPermission()
         if !isADdisplayed {
-            ShowIntrestAd(selfo:self,showAdafterSecound:2)
+            ShowIntrestAd(selfo:self,showAdafterSecound:3)
             isADdisplayed = true
         }
     }
@@ -87,34 +88,34 @@ class ViewController: UIViewController {
     @objc func showAdpopUP(){
         
         let alert = UIAlertController(title: "WATCH A VIDEO", message: "Add 70 Coins by Watching a Video", preferredStyle: .alert)
-               alert.addAction(UIAlertAction(title: "WATCH", style: .default, handler: { action in
-                   switch action.style{
-                   case .default:
-                    self.loadandShowRewardedAd()
-                   case .destructive:
-                       print("")
-                   case .cancel:
-                       print("")
-                   @unknown default:
-                       fatalError()
-                   }}))
-               
-            alert.addAction(UIAlertAction(title: "CANCEL", style: .default, handler: { action in
-                     switch action.style{
-                     case .default:
-                         print("")
-                     case .destructive:
-                         print("")
-                     case .cancel:
-                       print("")
-                     @unknown default:
-                         fatalError()
-                     }}))
-       
+        alert.addAction(UIAlertAction(title: "WATCH", style: .default, handler: { action in
+                                        switch action.style{
+                                        case .default:
+                                            self.loadandShowRewardedAd()
+                                        case .destructive:
+                                            print("")
+                                        case .cancel:
+                                            print("")
+                                        @unknown default:
+                                            fatalError()
+                                        }}))
+        
+        alert.addAction(UIAlertAction(title: "CANCEL", style: .default, handler: { action in
+                                        switch action.style{
+                                        case .default:
+                                            print("")
+                                        case .destructive:
+                                            print("")
+                                        case .cancel:
+                                            print("")
+                                        @unknown default:
+                                            fatalError()
+                                        }}))
+        
         self.present(alert, animated: true, completion: nil)
         
     }
-
+    
     @objc func soundPressed(){
         if Soundbut.imageView?.image == #imageLiteral(resourceName: "Sound"){
             UserDefaults.standard.setisbackGroundSoundOn(value: false)
